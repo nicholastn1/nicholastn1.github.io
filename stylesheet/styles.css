@@ -1,5 +1,70 @@
+/* Fixed footer CSS */
+/* #footer {
+  position: fixed;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+} */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+div.progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 100px;
+}
+
+div.skills-group {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.progress-percent {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.ruby-on-rails {width: 72%; background-color: #d60000ce; border-radius: 100px;}
+.html {width: 80%; background-color: #ff6d0b; border-radius: 100px;}
+.css {width: 55%; background-color: #183cb4d5; border-radius: 100px;}
+
+img.custom-img{
+  width: 150px;
+  height: 230px;
+  border-radius: 100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+header {
+  height: 50px;
+  flex-shrink: 0;
+  background-color: #037cf5;
+}
+footer {
+  height: 50px;
+  flex-shrink: 0;
+}
+
 body{
-  background-color: #383838;
+  background-color: #38383827;
 }
 
 div.custom-div {
@@ -11,13 +76,14 @@ div.custom-div {
   text-align: center;
 }
 
-div.buttons {
-  width: fit-content;
+div.about-me {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 10%;
   text-align: center;
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  flex-direction:row;
 }
 
 p.custom {
@@ -25,12 +91,20 @@ p.custom {
   font-weight: bold;
 }
 
-a {
+a.link {
   color: #0000FF;
   text-decoration: none;
 }
 
+a.button-text {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-weight: 500;
+}
+
 a.navbar-title {
+  text-decoration: none;
   font-size: 22px;
   color: rgb(0, 0, 0);
   padding: 10px 10px 10px 10px;
@@ -50,18 +124,36 @@ li.li-horizontal {
   display: inline;
 }
 
-button.custom {
-  background-color: #e6e6e6;
-  border: none;
-  color: white;
-  padding: 7px 16px;
-  font-size: 16px;
-  border-radius: 7px;
-  cursor: pointer;
-  transition-duration: 0.4s;
+div.button-group {
+  width: fit-content;
+  text-align: center;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-direction:row;
 }
 
-button.button:hover {
-  background-color: #4CAF50;
+button.button-navbar {
+  background-color: #383838;
+  border: none;
+  padding: 7px 16px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+button.button1 {
+  background-color: rgba(212, 212, 212, 0.116);
+  box-shadow: 0px 0px 8px rgb(255, 255, 255);
+}
+
+button.button1:hover {
+  background-color: rgb(212, 212, 212);
   color: white;
+  box-shadow: 0px 0px 10px rgba(212, 212, 212, 0.747);
+
 }
