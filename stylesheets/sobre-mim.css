@@ -1,0 +1,80 @@
+.sobre-mim {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  gap: 100px;
+  position: relative;
+}
+
+.sobre-mim::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  background: linear-gradient(137.94deg, #00198D 15.4%, #4F6DFF 88.72%);
+  position: absolute;
+  bottom: -75px;
+  left: 20px;
+}
+
+.sobre-mim .subtitulo {
+  color: #e0e0e0;
+  max-width: 6ch;
+}
+
+.sobre-mim .sobre-mim-pretexto {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-mim-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 50ch;
+  color: #525252;
+}
+
+.sobre-mim-div {
+  display: grid;
+  gap: 10px 20px;
+  padding: 20px;
+  background: rgba(245, 245, 245, 0.5);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.sobre-mim-div::before {
+  content: "";
+  display: block;
+  width: 254px;
+  height: 254px;
+  border-radius: 200px;
+  background: linear-gradient(137.94deg, #00198D 15.4%, #4F6DFF 88.72%);
+  position: absolute;
+  left: -120px;
+  top: -120px;
+  z-index: -1;
+}
+
+@media (max-width: 1100px) {
+  .sobre-mim {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sobre-mim .subtitulo {
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  .sobre-mim-texto {
+    font-size: 1.25rem;
+  }
+}

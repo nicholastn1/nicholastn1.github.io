@@ -1,97 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="stylesheet/styles.css">
-  <link rel="icon" href="images/brand.ico">
+  <meta name="description" content="Nicholas Timbó - Desenvolvedor Back End">
+  <link rel="icon" type="image/x-icon" href="./img/favicon.svg">
+  <title>Nicholas - Desenvolvedor</title>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-  <title>Nicholas Timbo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="fixed-navbar">
-    <div class="navbar">
-      <ul class="navbar-ul">
-        <a class="navbar-title" href="#">Nicholas</a>
-        <div class="button-group">
-          <button class="button-navbar button1"><a class="button-text" href="index.html">Home</a></button>
-          <button class="button-navbar button1"><a class="button-text" href="#">Sobre</a></button>
-          <button class="button-navbar button1"><a class="button-text" href="#">Contato</a></button>
-        </div>
+  <header class="header">
+    <img src="./img/Nicholas_Marca.svg" alt="Nicholas" width="175" height="35">
+    <nav>
+      <ul class="header-menu">
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#sobre_mim">Sobre Mim</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="introducao">
+    <img src="./img/Perfil.png" width="458.5" height="434" alt="Imagem de um homem branco, cabelo preto e que usa óculos, ajeitando a manga do seu terno">
+    <div>
+      <h1>Olá, eu sou<br>Nicholas Timbó</h1>
+      <p>Desenvolvedor Back End</p>
+    </div>
+  </main>
+
+  <section class="experiencia" id="experiencia" aria-label="Experiência">
+    <h2 class="subtitulo">Experiência</h2>
+    <div>
+      <p class="experiencia-texto">Trabalhei no desenvolvimento de uma aplicação web utilizando,
+        principalmente, a linguagem/framework <strong>Ruby On Rails</strong>, além de
+        outra linguagens, como <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> e <strong>JQuery</strong>. Utilizei
+        também o framework <strong>Bootstrap</strong> para criação de interfaces web, a
+        ferramenta <strong>GIT</strong> para versionamento de código e <strong>PostgreSQL</strong> para
+        gerenciamento de banco de dados.
+      </p>
+
+      <div class="empresa">
+        <span class="empresa-ano">07/2021-02/2022</span> <br>
+        <h3 class="empresa-titulo">Intersol - Soluções Web</h3>
+        <span class="empresa-titulo">Estagiário de Desenvolvimento Web</span>
+        <p class="empresa-texto">Utilizei a linguagem e framework Ruby On
+          Rails na criação de novas funcionalidades,
+          ajustes e sustentação do Back End, em uma
+          solução voltada para a administração pública.
+        </p>
+        <ul class="empresa-habilidades">
+          <li>Ruby On Rails</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>PostgreSQL</li>
+          <li>JavaScript</li>
+          <li>JQuery</li>
+          <li>Bootstrap</li>
+          <li>GIT</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="formacao" id="formacao" aria-label="Formação">
+    <div class="formacao-container">
+      <h2 class="subtitulo">Formação</h2>
+
+      <div>
+        <p class="formacao-texto">Atualmente sou Estudante de <strong>Ciência da Computação</strong> 🎓,
+          onde posso me desevonvolver profissionalmente e ter contato com matérias e
+          conteúdos muitos relevantes para o mercado atualmente, como <strong>Programação
+          Orientada à Objeto</strong>, <strong>Banco de Dados</strong>, <strong>Estrutura de Dados</strong>, <strong>Técnologias de Internet</strong>
+          e <strong>Lógica de Programação</strong>. Além disso, aproveito do curso bacharelado para criar
+          novas conexões, ampliar meus horizontes e adquirir novos aprendizados.</p>
+
+          <ul class="faculdade-lista">
+            <li class="faculdade">
+              <span class="faculdade-tipo">Bacharel</span>
+              <span class="faculdade-ano">2020.1-2024.2</span>
+              <h3 class="faculdade-curso">Ciência da Computação</h3>
+              <span class="faculdade-instituicao">Centro Universitário<br>Farias Brito</span>
+            </li>
+          </ul>
+
+          <div class="formacao-extra">
+            <div class="cursos">
+              <h3>Cursos Intensivos</h3>
+              <ul>
+                <li>Introdução ao Git e Github<span>02/2022</span></li>
+                <li>Ruby On Rails - Introdução à Arquitetura MVC<span>04/2022</span></li>
+                <li>Da Arquitetura ao Deploy com Ruby<span>04/2022</span></li>
+              </ul>
+            </div>
+
+            <div class="idiomas">
+              <h3>Idiomas</h3>
+              <ul>
+                <li>Português<span> / Nativo</span></li>
+                <li>Inglês<span> / Intermediário</span></li>
+                <li>Espanhol<span> / Básico</span></li>
+              </ul>
+            </div>
+
+          </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sobre-mim" id="sobre_mim" aria-label="Sobre Mim">
+    <h2 class="subtitulo">Sobre Mim</h2>
+    <div>
+      <h3 class="sobre-mim-pretexto">Programação, esporte, música & comida</h3>
+      <div class="sobre-mim-div">
+        <p class="sobre-mim-texto">Sou Estudante de Ciência da Computação.
+          Recentemente fui Estagiário de Desenvolvimento Back-End
+          utilizando a linguagem/framework Ruby On Rails na mesma
+          empresa que entrei como Estagiário Voluntário e onde comecei
+          minha carreira como desenvolvedor. Ademais, optei pelo Back-End
+          por ser uma área do meu interesse que requer muita atenção aos detalhes,
+          cuidado e um certo perfeccionismo ao entregar qualquer atividade, algo
+          que eu considero desafiador e vejo que posso me desenvolver e conseguir
+          cada vez mais experiência.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contato">
+    <div class="footer-container">
+      <p class="footer-texto">Caso tenha demonstrado interesse em meu perfil,
+        entre em contato para que possamos marcar uma possível conversa. 😁</p>
+      <ul class="footer-contato">
+        <li>nicholasnogueira12@gmail.com</li>
+        <li>+55 9 9704-1828</li>
+        <li><a href="https://www.instagram.com/nicholastn_/" target="_blank">@nicholastn_</a></li>
+      </ul>
+      <p class="footer-copy">©️ Nem Todos os Direitos Reservados - Nicholas Timbó<br>Designed by |<strong> nicholasnogueira12@gmail.com</strong></p>
+      <ul class="footer-icones">
+        <li><a href="https://www.instagram.com/nicholastn_/" target="_blank"><img src="./img/instagram-white.svg" alt="Logo do Instagram"></a></li>
+        <li><a href="https://www.linkedin.com/in/nicholastn/" target="_blank"><img src="./img/linkedin-white.svg" alt="Logo do Linkedin"></a></li>
+        <li><a href="https://github.com/nicholastn1" target="_blank"><img src="./img/github-white.svg" alt="Logo do Github"></a></li>
       </ul>
     </div>
-  </nav>
-
-  <div class="content">
-    <div>
-      <h1>Sobre Mim</h1>
-      <div class="about-me">
-        <img class="custom-img" src="images/me.png" alt="Foto de Nicholas Timbo">
-        <p class="custom">
-          Sou Estudante de Ciência da Computação. Recentemente fui Estagiário de Desenvolvimento Back-End
-          Ruby On Rails na mesma empresa que entrei como Estagiário Voluntário e onde comecei minha carreira
-          como desenvolvedor. Ademais, optei pelo Back-End por ser uma área do meu interesse que requer uma
-          certa lógica de programação, algo que eu considero desafiador e vejo que posso me desenvolver e
-          conseguir cada vez mais experiência.
-        </p>
-      </div>
-    </div>
-
-    <div>
-      <h1>Habilidades</h1>
-      <div class="skills">
-        <div class="skills-group">
-          <p class="custom"><img src="images/ruby.svg"> Ruby On Rails</p>
-          <div class="progress-bar progress-percent">
-            <div class="ruby-on-rails">72%</div>
-          </div>
-          <p class="custom"><img src="images/html.svg"> HTML</p>
-          <div class="progress-bar progress-percent">
-            <div class="html">80%</div>
-          </div>
-          <p class="custom"><img src="images/css.svg"> CSS</p>
-          <div class="progress-bar progress-percent">
-            <div class="css">55%</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <h1>Entre em contato</h1>
-      <div class="contact-me">
-        <form class="form" action="mailto:nicholasnogueira12@gmail.com" method="post">
-          <input type="name" class="name formEntry" placeholder="Name">
-          <input type="subject" class="email formEntry" placeholder="Assunto">
-          <input type="email" class="email formEntry" placeholder="Email">
-          <textarea class="message formEntry" placeholder="Message"></textarea>
-          <button class="submit formEntry">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p class="custom">
-      <p>Encontre-me</p>
-      <a href="https://www.linkedin.com/in/nicholastn/" class="link">
-        <img src="images/linkedin.svg" alt="LinkedIn" width="50" height="50">
-      </a>
-      <a href="https://www.facebook.com/Nicholas.Nogueira.10" class="link">
-        <img src="images/facebook.svg" alt="Facebook" width="50" height="50">
-      </a>
-      <a href="https://www.instagram.com/nicholastn_/" class="link">
-        <img src="images/instagram.svg" alt="Instagram" width="50" height="50">
-      </a>
-      <a href="https://github.com/nicholastn1" class="link">
-        <img src="images/github.svg" alt="GitHub" width="50" height="50">
-      </a>
-    </p>
-  </div>
+  </footer>
 
 </body>
 </html>
