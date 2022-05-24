@@ -18,6 +18,14 @@
   color: #ccc;
 }
 
+.footer-texto a {
+  font-weight: bold;
+  background: -webkit-linear-gradient(#00198D, #4F6DFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
 .footer-icones {
   display: flex;
   flex-wrap: wrap;
@@ -56,5 +64,4 @@
   .footer-contato li {
     font-size: 1.5rem;
   }
-  
 }
