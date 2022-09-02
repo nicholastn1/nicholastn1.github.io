@@ -20,7 +20,7 @@
 
 .footer-texto a {
   font-weight: bold;
-  background: -webkit-linear-gradient(#00198D, #4F6DFF);
+  background: -webkit-linear-gradient(#00198d, #4f6dff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
@@ -50,7 +50,7 @@
   color: #8f8f8f;
 }
 
-.footer-copy strong{
+.footer-copy strong {
   font-size: 1.125rem;
   color: #ffffff;
 }

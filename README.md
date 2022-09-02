@@ -1,24 +1,10 @@
-# README
+# Portifólio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- [Portifólio](#portifólio)
 
-Things you may want to cover:
+Projeto portifólio dedicado para explicar e apresentar um pouco dos meus conhecimentos adquiridos dentro do meu tempo de experiência.
 
-* Ruby version
+## [Portifólio](#portifólio)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[LinkedIn](https://www.linkedin.com/in/nicholastn/) </br>
+[Site](https://nicholastn1.github.io)

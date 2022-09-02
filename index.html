@@ -1,118 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nicholas Timbó - Desenvolvedor Back End">
-  <link rel="icon" type="image/x-icon" href="./img/favicon.svg">
-  <title>Nicholas - Desenvolvedor</title>
-  <link rel="stylesheet" href="./stylesheets/style.css">
-  <script src="./javascript/script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nicholas Timbó - Desenvolvedor Back End"
+    />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.svg" />
+    <title>Nicholas - Desenvolvedor</title>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <script src="./javascript/script.js"></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-</head>
-<body>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
-  <header class="header">
-    <img src="./img/Nicholas_Marca.svg" alt="Nicholas" width="175" height="35">
-    <nav>
-      <ul class="header-menu">
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#formacao">Formação</a></li>
-        <li><a href="#sobre_mim">Sobre Mim</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="introducao">
-    <img src="./img/Perfil.png" width="458.5" height="434" alt="Imagem de um homem branco, cabelo preto e que usa óculos, ajeitando a manga do seu terno">
-    <div>
-      <h1>Olá, eu sou<br>Nicholas Timbó</h1>
-      <p>Desenvolvedor Back End</p>
-    </div>
-  </main>
-
-  <section class="experiencia" id="experiencia" aria-label="Experiência">
-    <h2 class="subtitulo">Experiência</h2>
-    <div>
-      <p class="experiencia-texto">Trabalhei no desenvolvimento de uma aplicação web utilizando,
-        principalmente, a linguagem/framework <strong>Ruby On Rails</strong>, além de
-        outra linguagens, como <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> e <strong>JQuery</strong>. Utilizei
-        também o framework <strong>Bootstrap</strong> para criação de interfaces web, a
-        ferramenta <strong>GIT</strong> para versionamento de código e <strong>PostgreSQL</strong> para
-        gerenciamento de banco de dados.
-      </p>
-
-      <div class="empresa">
-        <span class="empresa-ano">07/2021-02/2022</span> <br>
-        <h3 class="empresa-titulo">Intersol - Soluções Web</h3>
-        <span class="empresa-titulo">Estagiário de Desenvolvimento Web</span>
-        <p class="empresa-texto">Utilizei a linguagem e framework Ruby On
-          Rails na criação de novas funcionalidades,
-          ajustes e sustentação do Back End, em uma
-          solução voltada para a administração pública.
-        </p>
-        <ul class="empresa-habilidades">
-          <li>Ruby On Rails</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>PostgreSQL</li>
-          <li>JavaScript</li>
-          <li>JQuery</li>
-          <li>Bootstrap</li>
-          <li>GIT</li>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <header class="header">
+      <img
+        src="./img/Nicholas_Marca.svg"
+        alt="Nicholas"
+        width="175"
+        height="35"
+      />
+      <nav>
+        <ul class="header-menu">
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#sobre_mim">Sobre Mim</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
-      </div>
-      
-      <div class="empresa">
-        <span class="empresa-ano">06/2022-Atualmente</span> <br>
-        <h3 class="empresa-titulo">FitBank 450</h3>
-        <span class="empresa-titulo">Estagiário de Desenvolvimento Fullstack</span>
-        <p class="empresa-texto">Desenvolvo na plataforma do FitBank, 
-          provendo novas melhorias, correção de bugs, 
-          manutenção de softwares e apps já existentes. 
-          Implementação de Microserviços, APIs e Webhooks. 
-          Além disso, crio e reutilizo códigos para criações 
-          de telas voltadas ao Frontend em um projeto 
-          voltado para o portal do Admin.
-        </p>
-        <ul class="empresa-habilidades">
-          <li>.NET</li>
-          <li>C#</li>
-          <li>ReactJS</li>
-          <li>Redux</li>
-          <li>JavaScript</li>
-          <li>SQL Server</li>
-          <li>Azure DevOps</li>
-          <li>Bootstrap</li>
-        </ul>
-      </div>
+      </nav>
+    </header>
 
-    </div>
-  </section>
-
-  <section class="formacao" id="formacao" aria-label="Formação">
-    <div class="formacao-container">
-      <h2 class="subtitulo">Formação</h2>
-
+    <main class="introducao">
+      <img
+        src="./img/Perfil.png"
+        width="458.5"
+        height="434"
+        alt="Imagem de um homem branco, cabelo preto e que usa óculos, ajeitando a manga do seu terno"
+      />
       <div>
-        <p class="formacao-texto">Atualmente sou Estudante de <strong>Ciência da Computação</strong> 🎓,
-          onde posso me desenvolver profissionalmente e ter contato com matérias e
-          conteúdos muitos relevantes para o mercado, como <strong>Programação
-          Orientada à Objeto</strong>, <strong>Banco de Dados</strong>, <strong>Estrutura de Dados</strong>, <strong>Tecnologias de Internet</strong>
-          e <strong>Lógica de Programação</strong>. Além disso, aproveito do curso bacharelado para criar
-          novas conexões, ampliar meus horizontes e adquirir novos aprendizados.</p>
+        <h1>Olá, eu sou<br />Nicholas Timbó</h1>
+        <p>Desenvolvedor Fullstack</p>
+      </div>
+    </main>
+
+    <section class="experiencia" id="experiencia" aria-label="Experiência">
+      <h2 class="subtitulo">Experiência</h2>
+      <div>
+        <p class="experiencia-texto">
+          Trabalhei no desenvolvimento de uma aplicação web utilizando,
+          principalmente, a linguagem/framework <strong>Ruby On Rails</strong>,
+          além de outra linguagens, como <strong>HTML</strong>,
+          <strong>CSS</strong>, <strong>JavaScript</strong> e
+          <strong>JQuery</strong>. Utilizei também o framework
+          <strong>Bootstrap</strong> para criação de interfaces web, a
+          ferramenta <strong>GIT</strong> para versionamento de código e
+          <strong>PostgreSQL</strong> para gerenciamento de banco de dados.
+        </p>
+
+        <div class="empresa">
+          <span class="empresa-ano">07/2021-02/2022</span> <br />
+          <h3 class="empresa-titulo">Intersol - Soluções Web</h3>
+          <span class="empresa-titulo">Estagiário de Desenvolvimento Web</span>
+          <p class="empresa-texto">
+            Utilizei a linguagem e framework Ruby On Rails na criação de novas
+            funcionalidades, ajustes e sustentação do Back End, em uma solução
+            voltada para a administração pública.
+          </p>
+          <ul class="empresa-habilidades">
+            <li>Ruby On Rails</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>PostgreSQL</li>
+            <li>JavaScript</li>
+            <li>JQuery</li>
+            <li>Bootstrap</li>
+            <li>GIT</li>
+          </ul>
+        </div>
+
+        <div class="empresa">
+          <span class="empresa-ano">06/2022-Atualmente</span> <br />
+          <h3 class="empresa-titulo">FitBank 450</h3>
+          <span class="empresa-titulo"
+            >Estagiário de Desenvolvimento Fullstack</span
+          >
+          <p class="empresa-texto">
+            Desenvolvo na plataforma do FitBank, provendo novas melhorias,
+            correção de bugs, manutenção de softwares e apps já existentes.
+            Implementação de Microserviços, APIs e Webhooks. Além disso, crio e
+            reutilizo códigos para criações de telas voltadas ao Frontend em um
+            projeto voltado para o portal do Admin.
+          </p>
+          <ul class="empresa-habilidades">
+            <li>.NET</li>
+            <li>C#</li>
+            <li>ReactJS</li>
+            <li>Redux</li>
+            <li>JavaScript</li>
+            <li>SQL Server</li>
+            <li>Azure DevOps</li>
+            <li>Bootstrap</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="formacao" id="formacao" aria-label="Formação">
+      <div class="formacao-container">
+        <h2 class="subtitulo">Formação</h2>
+
+        <div>
+          <p class="formacao-texto">
+            Atualmente sou Estudante de
+            <strong>Ciência da Computação</strong> 🎓, onde posso me desenvolver
+            profissionalmente e ter contato com matérias e conteúdos muitos
+            relevantes para o mercado, como
+            <strong>Programação Orientada à Objeto</strong>,
+            <strong>Banco de Dados</strong>,
+            <strong>Estrutura de Dados</strong>,
+            <strong>Tecnologias de Internet</strong> e
+            <strong>Lógica de Programação</strong>. Além disso, aproveito do
+            curso bacharelado para criar novas conexões, ampliar meus horizontes
+            e adquirir novos aprendizados.
+          </p>
 
           <ul class="faculdade-lista">
             <li class="faculdade">
               <span class="faculdade-tipo">Bacharel</span>
               <span class="faculdade-ano">2020.1-2024.2</span>
               <h3 class="faculdade-curso">Ciência da Computação</h3>
-              <span class="faculdade-instituicao">Centro Universitário<br>Farias Brito</span>
+              <span class="faculdade-instituicao"
+                >Centro Universitário<br />Farias Brito</span
+              >
             </li>
           </ul>
 
@@ -120,8 +148,17 @@
             <div class="cursos">
               <h3>Cursos Intensivos</h3>
               <ul>
-                <li>Introdução ao Git e Github<span>02/2022</span></li>
-                <li>Ruby On Rails - Introdução à Arquitetura MVC<span>04/2022</span></li>
+                <li>Formação .NET<span>93h | 07/2022</span></li>
+                <li>
+                  EF SET English Certificate (B2 Upper Intermediate)<span
+                    >04/2022</span
+                  >
+                </li>
+                <li>
+                  Ruby On Rails - Introdução à Arquitetura MVC<span
+                    >04/2022</span
+                  >
+                </li>
                 <li>Da Arquitetura ao Deploy com Ruby<span>04/2022</span></li>
               </ul>
             </div>
@@ -134,46 +171,91 @@
                 <li>Espanhol<span> / Básico</span></li>
               </ul>
             </div>
-
           </div>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <section class="sobre-mim" id="sobre_mim" aria-label="Sobre Mim">
-    <h2 class="subtitulo">Sobre Mim</h2>
-    <div>
-      <h3 class="sobre-mim-pretexto">Programação, esporte, música & comida</h3>
-      <div class="sobre-mim-div">
-        <p class="sobre-mim-texto">Sou Estudante de Ciência da Computação.
-          Recentemente fui Estagiário de Desenvolvimento Back-End
-          utilizando a linguagem/framework Ruby On Rails na mesma
-          empresa que entrei como Estagiário Voluntário e onde comecei
-          minha carreira como desenvolvedor. Ademais, optei pelo Back-End
-          por ser uma área do meu interesse que requer muita atenção aos detalhes,
-          cuidado e um certo perfeccionismo ao entregar qualquer atividade, algo
-          que eu considero desafiador e vejo que posso me desenvolver e conseguir
-          cada vez mais experiência.</p>
+    <section class="sobre-mim" id="sobre_mim" aria-label="Sobre Mim">
+      <h2 class="subtitulo">Sobre Mim</h2>
+      <div>
+        <h3 class="sobre-mim-pretexto">Desenvolvimento & café ☕</h3>
+        <div class="sobre-mim-div">
+          <p class="sobre-mim-texto">
+            Sou Estudante de Ciência da Computação.
+            <strong
+              >Minha primeira experiência entrei como Estagiário
+              Voluntário</strong
+            >, e apenas 2 meses depois passei a ser remunerado e pude ter
+            contato com a linguagem/framework Ruby On Rails onde comecei minha
+            carreira como desenvolvedor. Optei pelo Back-End por ser uma área do
+            meu interesse que requer muita atenção aos detalhes, conhecimentos
+            com padrões de projetos e de Arquitetura de Software, tema que eu
+            procuro saber cada vez mais, além da área de Dados, que também está
+            entre minhas áreas de interesse dentro do mundo da Tecnologia.
+          </p>
+        </div>
+        <div class="sobre-mim-div2">
+          <p class="sobre-mim-texto">
+            Atualmente sou Desenvolvedor Fullstack no
+            <a href="https://fitbank.com.br " target="_blank">FitBank</a>. Atuo
+            em uma das soluções onde sou voltado para
+            <strong
+              >criar features, corrigir bugs e criar integrações entre outras
+              soluções</strong
+            >
+            para o Portal do Admin. Pude ter contato com várias tecnologias,
+            dentre elas as principais são .NET/C#, ReactJS e SQL Server. Adquiri
+            conhecimentos voltados tanto com
+            <strong>Frontend para consumo de API's</strong>, quanto aprimorei
+            minhas habilidades no
+            <strong>Backend voltado para a criação de API's</strong>. Com isso
+            estou procurando me especializar cada vez mais na área e
+            <strong>masterizar meus conhecimentos</strong>, sempre
+            <strong>reforçando minhas bases</strong> e aprendendo tudo que pode
+            me ajudar, seja de maneira técnica ou pessoal.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer" id="contato">
-    <div class="footer-container">
-      <p class="footer-texto">Caso tenha demonstrado interesse em meu perfil,
-        me manda uma mensagem no <a href="https://api.whatsapp.com/send/?phone=5585997041828&text=Olá.%20Tive%20interesse%20em%20seu%20perfil.%20Podemos%20marcar%20uma%20conversa%3F&app_absent=0" target="_blank">whatsapp</a> para que possamos marcar uma possível conversa. 😁</p>
-      <ul class="footer-contato">
-        <li>nicholasnogueira12@gmail.com</li>
-      </ul>
-      <p class="footer-copy">©️ 2022 Nicholas Timbó. Nem Todos os Direitos Reservados<br>Designed by |<strong> nicholasnogueira12@gmail.com</strong></p>
-      <ul class="footer-icones">
-        <li><a href="https://www.instagram.com/nicholastn_/" target="_blank"><img src="./img/instagram-white.svg" alt="Logo do Instagram"></a></li>
-        <li><a href="https://www.linkedin.com/in/nicholastn/" target="_blank"><img src="./img/linkedin-white.svg" alt="Logo do Linkedin"></a></li>
-        <li><a href="https://github.com/nicholastn1" target="_blank"><img src="./img/github-white.svg" alt="Logo do Github"></a></li>
-      </ul>
-    </div>
-  </footer>
-
-</body>
+    <footer class="footer" id="contato">
+      <div class="footer-container">
+        <p class="footer-texto">
+          Caso tenha demonstrado interesse em meu perfil, me manda uma mensagem
+          no
+          <a
+            href="https://api.whatsapp.com/send/?phone=5585997041828&text=Olá.%20Tive%20interesse%20em%20seu%20perfil.%20Podemos%20marcar%20uma%20conversa%3F&app_absent=0"
+            target="_blank"
+            >whatsapp</a
+          >
+          para que possamos marcar uma possível conversa. 😁
+        </p>
+        <ul class="footer-contato">
+          <li>nicholasnogueira12@gmail.com</li>
+        </ul>
+        <p class="footer-copy">
+          ©️ 2022 Nicholas Timbó. Nem Todos os Direitos Reservados<br />Designed
+          by |<strong> nicholasnogueira12@gmail.com</strong>
+        </p>
+        <ul class="footer-icones">
+          <li>
+            <a href="https://www.instagram.com/nicholastn_/" target="_blank"
+              ><img src="./img/instagram-white.svg" alt="Logo do Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/nicholastn/" target="_blank"
+              ><img src="./img/linkedin-white.svg" alt="Logo do Linkedin"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/nicholastn1" target="_blank"
+              ><img src="./img/github-white.svg" alt="Logo do Github"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>

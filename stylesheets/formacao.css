@@ -68,7 +68,7 @@
   width: 80px;
   height: 80px;
   border-radius: 100px;
-  background: linear-gradient(137.94deg, #00198D 15.4%, #4F6DFF 88.72%);
+  background: linear-gradient(137.94deg, #00198d 15.4%, #4f6dff 88.72%);
   position: absolute;
   left: -60px;
   top: -120px;
@@ -106,7 +106,6 @@
 .cursos h3::before {
   background: url("../img/cursos.svg") no-repeat center center;
 }
-
 
 .idiomas h3::before {
   background: url("../img/idiomas.svg") no-repeat center center;
