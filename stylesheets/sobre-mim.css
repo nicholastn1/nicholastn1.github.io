@@ -40,9 +40,16 @@
   color: #525252;
 }
 
-.sobre-mim-texto a {
+.fit-bank{
   font-weight: bold;
   background: -webkit-linear-gradient(#32384e, #5f81a5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.atos6{
+  font-weight: bold;
+  background: -webkit-linear-gradient(#6709A8, #A433F3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
