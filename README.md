@@ -8,3 +8,4 @@ Projeto portifólio dedicado para explicar e apresentar um pouco dos meus conhec
 
 [LinkedIn](https://www.linkedin.com/in/nicholastn/) </br>
 [Site](https://nicholastn1.github.io)
+
