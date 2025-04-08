@@ -80,7 +80,18 @@
   color: #a3a3a3;
 }
 
+.faculdade-atividades {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #8f8f8f;
+  margin-top: 10px;
+}
+
 .cursos {
+  margin-bottom: 60px;
+}
+
+.voluntariado {
   margin-bottom: 60px;
 }
 
@@ -111,6 +122,10 @@
   background: url("../img/idiomas.svg") no-repeat center center;
 }
 
+.voluntariado h3::before {
+  background: url("../img/cursos.svg") no-repeat center center;
+}
+
 .formacao-extra li {
   font-size: 1.125rem;
   list-style: 1.1;
@@ -121,7 +136,7 @@
   color: #8f8f8f8f;
 }
 
-.cursos li {
+.cursos li, .voluntariado li {
   display: flex;
   justify-content: space-between;
 }
