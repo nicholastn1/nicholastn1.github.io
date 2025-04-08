@@ -67,6 +67,26 @@
   color: #525252;
 }
 
+.empresa-realizacoes {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.empresa-realizacoes li {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin-bottom: 5px;
+  position: relative;
+  color: #525252;
+}
+
+.empresa-realizacoes li::before {
+  content: "•";
+  position: absolute;
+  left: -15px;
+  color: #00e59b;
+}
+
 .empresa-habilidades {
   display: flex;
   flex-wrap: wrap;

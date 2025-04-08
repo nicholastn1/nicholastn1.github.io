@@ -1,0 +1,68 @@
+.projetos {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.projetos .subtitulo {
+  color: #e0e0e0;
+}
+
+.projeto {
+  background: rgba(245, 245, 245, 0.5);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.projeto-titulo {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  position: relative;
+  font-weight: bold;
+}
+
+.projeto-data {
+  font-size: 0.875rem;
+  color: #525252;
+  margin-bottom: 10px;
+  display: block;
+  font-style: italic;
+}
+
+.projeto-descricao {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #525252;
+  margin-bottom: 20px;
+}
+
+.projeto-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.projeto-habilidades li {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  border-radius: 5px;
+  background: #ffffff;
+  padding: 5px 10px;
+}
+
+@media (max-width: 800px) {
+  .projetos {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .projetos .subtitulo {
+    color: #141414;
+  }
+}
