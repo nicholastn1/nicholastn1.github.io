@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useI18n()
 const colorMode = useColorMode()
 
 const isDark = computed(() => colorMode.value === 'dark')
@@ -12,7 +13,7 @@ const toggleColorMode = () => {
   <button
     type="button"
     class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 transition-all duration-300 hover:bg-gray-200 hover:scale-110 dark:bg-white/10 dark:hover:bg-white/20"
-    :aria-label="isDark ? 'Ativar modo claro' : 'Ativar modo escuro'"
+    :aria-label="isDark ? t('theme.lightMode') : t('theme.darkMode')"
     @click="toggleColorMode"
   >
     <!-- Sun icon (shown in dark mode) -->
