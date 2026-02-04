@@ -1,18 +1,23 @@
 # Skills organized by proficiency level - Nicholas Nogueira Portfolio
+# Top 10 skills marked as featured: true
 
 proficient:
   - name: "Ruby"
     category: "backend"
+    featured: true
   - name: "Rails"
     category: "backend"
+    featured: true
   - name: "Sidekiq"
     category: "backend"
   - name: "Docker"
     category: "devops"
+    featured: true
   - name: "Nuxt"
     category: "frontend"
   - name: "Vue"
     category: "frontend"
+    featured: true
   - name: "JavaScript"
     category: "frontend"
   - name: "jQuery"
@@ -21,6 +26,7 @@ proficient:
     category: "database"
   - name: "PostgreSQL"
     category: "database"
+    featured: true
   - name: "Bootstrap"
     category: "frontend"
   - name: "Git"
@@ -31,10 +37,12 @@ proficient:
     category: "devops"
   - name: "REST API"
     category: "backend"
+    featured: true
   - name: "Heroku"
     category: "devops"
   - name: "Microservices"
     category: "architecture"
+    featured: true
   - name: "Scrum"
     category: "methodology"
   - name: "Kanban"
@@ -53,10 +61,12 @@ intermediate:
     category: "database"
   - name: "C#"
     category: "backend"
+    featured: true
   - name: ".NET"
     category: "backend"
   - name: "TypeScript"
     category: "frontend"
+    featured: true
   - name: "GraphQL"
     category: "backend"
   - name: "Swagger"

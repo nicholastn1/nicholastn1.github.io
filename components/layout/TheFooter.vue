@@ -39,8 +39,16 @@ const socialIcons: Record<string, string> = {
 </script>
 
 <template>
-  <footer id="contato" class="bg-black py-16 text-white">
-    <div class="container-main">
+  <footer id="contato" class="relative overflow-hidden bg-black py-16 text-white">
+    <!-- Grid Background (subtle version for footer) -->
+    <UiGridBackground
+      :grid-size="40"
+      :grid-opacity="0.05"
+      :glow-intensity="0.25"
+      :glow-size="300"
+    />
+
+    <div class="container-main relative z-10">
       <div class="grid gap-10 md:grid-cols-2">
         <!-- Contact Info -->
         <div>

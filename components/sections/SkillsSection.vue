@@ -8,9 +8,17 @@ const { data: skillsData } = await useAsyncData('skills', () =>
   queryContent('/data/skills').findOne()
 )
 
-const proficient = computed<Skill[]>(() => skillsData.value?.proficient || [])
-const intermediate = computed<Skill[]>(() => skillsData.value?.intermediate || [])
-const beginner = computed<Skill[]>(() => skillsData.value?.beginner || [])
+// Get all skills and filter only featured ones
+const allSkills = computed<Skill[]>(() => {
+  const proficient = skillsData.value?.proficient || []
+  const intermediate = skillsData.value?.intermediate || []
+  const beginner = skillsData.value?.beginner || []
+  return [...proficient, ...intermediate, ...beginner]
+})
+
+const featuredSkills = computed<Skill[]>(() =>
+  allSkills.value.filter(skill => skill.featured)
+)
 
 // Animation refs
 const titleRef = ref<HTMLElement>()
@@ -57,60 +65,21 @@ const getCategoryColor = (category: string) => {
         <h2 class="section-subtitle text-black/20 dark:text-white/20">{{ t('skills.title') }}</h2>
       </div>
 
-      <!-- Content -->
-      <div ref="contentRef" class="space-y-8">
-        <!-- Proficient -->
-        <div v-if="proficient.length">
-          <h3 class="mb-4 flex items-center gap-2 text-lg font-semibold text-text-primary dark:text-white">
-            <span class="inline-block h-2 w-2 rounded-full bg-accent-green" />
-            {{ t('skills.proficient') }}
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="skill in proficient"
-              :key="skill.name"
-              class="rounded-full px-3 py-1 text-sm font-medium transition-all hover:scale-105"
-              :class="getCategoryColor(skill.category)"
-            >
-              {{ skill.name }}
-            </span>
-          </div>
-        </div>
-
-        <!-- Intermediate -->
-        <div v-if="intermediate.length">
-          <h3 class="mb-4 flex items-center gap-2 text-lg font-semibold text-text-primary dark:text-white">
-            <span class="inline-block h-2 w-2 rounded-full bg-yellow-500" />
-            {{ t('skills.intermediate') }}
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="skill in intermediate"
-              :key="skill.name"
-              class="rounded-full px-3 py-1 text-sm font-medium transition-all hover:scale-105"
-              :class="getCategoryColor(skill.category)"
-            >
-              {{ skill.name }}
-            </span>
-          </div>
-        </div>
-
-        <!-- Beginner -->
-        <div v-if="beginner.length">
-          <h3 class="mb-4 flex items-center gap-2 text-lg font-semibold text-text-primary dark:text-white">
-            <span class="inline-block h-2 w-2 rounded-full bg-gray-500" />
-            {{ t('skills.beginner') }}
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="skill in beginner"
-              :key="skill.name"
-              class="rounded-full px-3 py-1 text-sm font-medium transition-all hover:scale-105"
-              :class="getCategoryColor(skill.category)"
-            >
-              {{ skill.name }}
-            </span>
-          </div>
+      <!-- Featured Skills -->
+      <div ref="contentRef">
+        <h3 class="mb-6 flex items-center gap-2 text-lg font-semibold text-text-primary dark:text-white">
+          <span class="inline-block h-2 w-2 rounded-full bg-accent-green" />
+          {{ t('skills.featured') }}
+        </h3>
+        <div class="flex flex-wrap gap-3">
+          <span
+            v-for="skill in featuredSkills"
+            :key="skill.name"
+            class="rounded-full px-4 py-2 text-sm font-medium transition-all hover:scale-105"
+            :class="getCategoryColor(skill.category)"
+          >
+            {{ skill.name }}
+          </span>
         </div>
       </div>
     </div>

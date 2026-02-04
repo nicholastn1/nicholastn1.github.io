@@ -122,6 +122,7 @@ export interface AboutData {
 export interface Skill {
   name: string
   category: 'backend' | 'frontend' | 'database' | 'devops' | 'cloud' | 'architecture' | 'methodology' | 'design' | 'documentation'
+  featured?: boolean
 }
 
 export interface SkillsData {

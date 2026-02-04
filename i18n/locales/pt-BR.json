@@ -9,7 +9,10 @@
     "blog": "Blog"
   },
   "hero": {
-    "greeting": "Olá, eu sou"
+    "greeting": "Olá",
+    "im": "Eu sou ",
+    "contact": "Contato",
+    "viewSkills": "Ver Skills"
   },
   "about": {
     "title": "Sobre Mim",
@@ -31,6 +34,7 @@
   },
   "skills": {
     "title": "Skills",
+    "featured": "Top Skills",
     "proficient": "Proficiente",
     "intermediate": "Intermediário",
     "beginner": "Iniciante"
