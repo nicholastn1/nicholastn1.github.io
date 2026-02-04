@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import type { Project } from '~/types'
 
-// Fetch projects data from YAML
-const { data: projectsData } = await useAsyncData('projects', () =>
-  queryContent('/data/projects').findOne()
+const { t, locale } = useI18n()
+const { getDataPath } = useLocalizedContent()
+
+// Fetch projects data from YAML (locale-aware)
+const { data: projectsData } = await useAsyncData(`projects-${locale.value}`, () =>
+  queryContent(getDataPath('/data/projects')).findOne()
 )
 
 const projects = computed<Project[]>(() => projectsData.value?.projects || [])
@@ -30,7 +33,7 @@ onMounted(() => {
       <!-- Section Title -->
       <div ref="titleRef">
         <h2 class="section-subtitle text-gray-200 dark:text-gray-800">
-          Projetos
+          {{ t('projects.title') }}
         </h2>
       </div>
 
@@ -40,6 +43,8 @@ onMounted(() => {
           v-for="project in projects"
           :key="project.id"
           decorated
+          hover-enhanced
+          tilt
           class="project-card"
         >
           <!-- Header -->
@@ -90,7 +95,7 @@ onMounted(() => {
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
-              Ver projeto
+              {{ t('projects.viewProject') }}
             </a>
           </div>
 

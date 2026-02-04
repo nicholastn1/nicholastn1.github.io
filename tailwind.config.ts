@@ -22,6 +22,9 @@ export default {
         // Accent colors
         accent: {
           green: '#00e59b',
+          blue: '#3B82F6',
+          'blue-light': '#60A5FA',
+          'blue-dark': '#2563EB',
         },
         // Background colors
         background: {

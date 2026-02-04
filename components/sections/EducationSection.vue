@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import type { Education, Certification, Volunteering, Language } from '~/types'
 
-// Fetch education data from YAML
-const { data: educationData } = await useAsyncData('education', () =>
-  queryContent('/data/education').findOne()
+const { t, locale } = useI18n()
+const { getDataPath } = useLocalizedContent()
+
+// Fetch education data from YAML (locale-aware)
+const { data: educationData } = await useAsyncData(`education-${locale.value}`, () =>
+  queryContent(getDataPath('/data/education')).findOne()
 )
 
 const summary = computed(() => educationData.value?.summary || '')
@@ -29,11 +32,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="formacao" class="bg-background-dark py-20 text-white">
-    <div class="container-main grid gap-10 lg:grid-cols-[1fr_2fr]">
+  <section id="formacao" class="relative overflow-hidden bg-background-dark py-20 text-white">
+    <!-- Decorative shape -->
+    <div
+      class="section-shape right-0 top-20 h-64 w-64 rounded-full bg-accent-blue blur-3xl md:h-96 md:w-96"
+      aria-hidden="true"
+    />
+    <div class="container-main relative z-10 grid gap-10 lg:grid-cols-[1fr_2fr]">
       <!-- Section Title -->
       <div ref="titleRef">
-        <h2 class="section-subtitle text-black/20">Formação</h2>
+        <h2 class="section-subtitle text-black/20">{{ t('education.title') }}</h2>
       </div>
 
       <!-- Content -->
@@ -61,7 +69,7 @@ onMounted(() => {
               </span>
             </div>
             <p v-if="edu.activities?.length" class="mt-2 text-sm text-text-muted">
-              Atividades: {{ edu.activities.join(', ') }}
+              {{ t('education.activities') }}: {{ edu.activities.join(', ') }}
             </p>
           </div>
         </div>
@@ -70,7 +78,7 @@ onMounted(() => {
         <div class="grid gap-8 md:grid-cols-3">
           <!-- Certifications -->
           <div v-if="certifications.length">
-            <h3 class="mb-4 text-lg font-semibold">Certificações & Treinamentos</h3>
+            <h3 class="mb-4 text-lg font-semibold">{{ t('education.certifications') }}</h3>
             <ul class="space-y-3">
               <li
                 v-for="cert in certifications"
@@ -88,7 +96,7 @@ onMounted(() => {
 
           <!-- Volunteering -->
           <div v-if="volunteering.length">
-            <h3 class="mb-4 text-lg font-semibold">Voluntariado</h3>
+            <h3 class="mb-4 text-lg font-semibold">{{ t('education.volunteering') }}</h3>
             <ul class="space-y-3">
               <li
                 v-for="vol in volunteering"
@@ -105,7 +113,7 @@ onMounted(() => {
 
           <!-- Languages -->
           <div v-if="languages.length">
-            <h3 class="mb-4 text-lg font-semibold">Idiomas</h3>
+            <h3 class="mb-4 text-lg font-semibold">{{ t('education.languages') }}</h3>
             <ul class="space-y-3">
               <li
                 v-for="lang in languages"

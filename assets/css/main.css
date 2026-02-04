@@ -223,4 +223,114 @@
     content: '•';
     @apply mr-2 text-accent-green;
   }
+
+  /* ========================================
+     GEOMETRIC SHAPES & DECORATIVE ELEMENTS
+     ======================================== */
+
+  /* Electric blue shape base */
+  .shape-electric {
+    @apply bg-accent-blue;
+  }
+
+  .shape-electric-gradient {
+    background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 50%, #2563EB 100%);
+  }
+
+  /* Rounded rectangle shape for hero */
+  .hero-shape {
+    @apply absolute rounded-2xl;
+    background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
+    z-index: -1;
+  }
+
+  /* Subtle glow effect */
+  .glow-blue {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+  }
+
+  .dark .glow-blue {
+    box-shadow: 0 0 60px rgba(59, 130, 246, 0.4);
+  }
+
+  /* Card hover enhancement */
+  .card-hover-enhanced {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover-enhanced:hover {
+    @apply shadow-xl;
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(59, 130, 246, 0.1);
+  }
+
+  .dark .card-hover-enhanced:hover {
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(59, 130, 246, 0.2);
+  }
+
+  /* Tilt-ready container */
+  .tilt-container {
+    transform-style: preserve-3d;
+  }
+
+  /* Section decorative shapes */
+  .section-shape {
+    @apply pointer-events-none absolute opacity-[0.03];
+  }
+
+  .dark .section-shape {
+    @apply opacity-[0.08];
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply relative mx-auto h-px w-full max-w-container overflow-hidden;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(59, 130, 246, 0.3) 50%,
+      transparent 100%
+    );
+  }
+
+  .dark .section-divider {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(59, 130, 246, 0.5) 50%,
+      transparent 100%
+    );
+  }
+
+  /* Accent border on hover */
+  .border-hover-accent {
+    @apply border border-transparent transition-colors duration-300;
+  }
+
+  .border-hover-accent:hover {
+    @apply border-accent-blue/30;
+  }
+
+  .dark .border-hover-accent:hover {
+    @apply border-accent-blue/40;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION SUPPORT
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .card-hover-enhanced,
+  .tilt-container {
+    transform: none !important;
+    transition: opacity 0.3s ease !important;
+  }
+
+  .card-hover-enhanced:hover {
+    transform: none !important;
+  }
 }

@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import type { Experience } from '~/types'
 
-// Fetch experiences data from YAML
-const { data: experiencesData } = await useAsyncData('experiences', () =>
-  queryContent('/data/experiences').findOne()
+const { t, locale } = useI18n()
+const { getDataPath } = useLocalizedContent()
+
+// Fetch experiences data from YAML (locale-aware)
+const { data: experiencesData } = await useAsyncData(`experiences-${locale.value}`, () =>
+  queryContent(getDataPath('/data/experiences')).findOne()
 )
 
 const experiences = computed<Experience[]>(() => experiencesData.value?.experiences || [])
@@ -35,7 +38,7 @@ onMounted(() => {
       <!-- Section Title -->
       <div ref="titleRef">
         <h2 class="section-subtitle text-gray-200 dark:text-gray-800">
-          Experiência
+          {{ t('experience.title') }}
         </h2>
       </div>
 
@@ -55,6 +58,7 @@ onMounted(() => {
             v-for="exp in experiences"
             :key="exp.id"
             decorated
+            hover-enhanced
             class="experience-card relative"
           >
             <!-- Period -->
