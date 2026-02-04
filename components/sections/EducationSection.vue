@@ -11,18 +11,33 @@ const education = computed<Education[]>(() => educationData.value?.education || 
 const certifications = computed<Certification[]>(() => educationData.value?.certifications || [])
 const volunteering = computed<Volunteering[]>(() => educationData.value?.volunteering || [])
 const languages = computed<Language[]>(() => educationData.value?.languages || [])
+
+// Animation refs
+const titleRef = ref<HTMLElement>()
+const contentRef = ref<HTMLElement>()
+
+const { fadeInUp } = useScrollAnimation()
+
+onMounted(() => {
+  if (titleRef.value) {
+    fadeInUp(titleRef.value, { y: 30 })
+  }
+  if (contentRef.value) {
+    fadeInUp(contentRef.value, { y: 40, delay: 0.2 })
+  }
+})
 </script>
 
 <template>
   <section id="formacao" class="bg-background-dark py-20 text-white">
     <div class="container-main grid gap-10 lg:grid-cols-[1fr_2fr]">
       <!-- Section Title -->
-      <div>
+      <div ref="titleRef">
         <h2 class="section-subtitle text-black/20">Formação</h2>
       </div>
 
       <!-- Content -->
-      <div>
+      <div ref="contentRef">
         <!-- Summary -->
         <p
           v-if="summary"

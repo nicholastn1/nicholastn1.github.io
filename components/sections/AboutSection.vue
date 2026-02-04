@@ -31,21 +31,36 @@ const processedBio = computed(() => {
     return processed
   })
 })
+
+// Animation refs
+const titleRef = ref<HTMLElement>()
+const contentRef = ref<HTMLElement>()
+
+const { fadeInUp, staggerChildren } = useScrollAnimation()
+
+onMounted(() => {
+  if (titleRef.value) {
+    fadeInUp(titleRef.value, { y: 30 })
+  }
+  if (contentRef.value) {
+    staggerChildren(contentRef.value, '.bio-paragraph', { stagger: 0.1, y: 30 })
+  }
+})
 </script>
 
 <template>
   <section id="sobre_mim" class="py-20">
     <div class="container-main grid gap-10 lg:grid-cols-[1fr_2fr]">
       <!-- Section Title -->
-      <div>
+      <div ref="titleRef">
         <h2 class="section-subtitle text-gray-200 dark:text-gray-800">
           Sobre Mim
         </h2>
       </div>
 
       <!-- Content -->
-      <div>
-        <h3 class="mb-6 text-2xl font-bold">
+      <div ref="contentRef">
+        <h3 class="bio-paragraph mb-6 text-2xl font-bold">
           Desenvolvimento & otimização
           <span class="inline-block animate-pulse">⚡</span>
         </h3>
@@ -54,7 +69,7 @@ const processedBio = computed(() => {
           <p
             v-for="(paragraph, idx) in processedBio"
             :key="idx"
-            class="text-lg leading-relaxed text-text-secondary dark:text-text-muted"
+            class="bio-paragraph text-lg leading-relaxed text-text-secondary dark:text-text-muted"
             v-html="paragraph"
           />
         </div>

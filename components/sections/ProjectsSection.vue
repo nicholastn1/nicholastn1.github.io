@@ -7,24 +7,40 @@ const { data: projectsData } = await useAsyncData('projects', () =>
 )
 
 const projects = computed<Project[]>(() => projectsData.value?.projects || [])
+
+// Animation refs
+const titleRef = ref<HTMLElement>()
+const cardsRef = ref<HTMLElement>()
+
+const { fadeInUp, staggerChildren } = useScrollAnimation()
+
+onMounted(() => {
+  if (titleRef.value) {
+    fadeInUp(titleRef.value, { y: 30 })
+  }
+  if (cardsRef.value) {
+    staggerChildren(cardsRef.value, '.project-card', { stagger: 0.15, y: 40 })
+  }
+})
 </script>
 
 <template>
   <section id="projetos" class="py-20">
     <div class="container-main grid gap-10 lg:grid-cols-[1fr_2fr]">
       <!-- Section Title -->
-      <div>
+      <div ref="titleRef">
         <h2 class="section-subtitle text-gray-200 dark:text-gray-800">
           Projetos
         </h2>
       </div>
 
       <!-- Content -->
-      <div class="space-y-6">
+      <div ref="cardsRef" class="space-y-6">
         <UiCard
           v-for="project in projects"
           :key="project.id"
           decorated
+          class="project-card"
         >
           <!-- Header -->
           <div class="mb-3 flex items-start justify-between gap-4">

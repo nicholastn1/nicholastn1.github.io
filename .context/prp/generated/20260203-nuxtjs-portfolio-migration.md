@@ -443,20 +443,22 @@ export default defineNuxtConfig({
 
 ### Phase 5: Animações GSAP
 
-1. [ ] Instalar GSAP e plugins necessários (`gsap`, `@gsap/business` ou plugins free)
-2. [ ] Criar composable `useScrollAnimation.ts`
-3. [ ] Adicionar fade-in animations nas seções ao scroll
-4. [ ] Animar cards de experiência com stagger
-5. [ ] Animar skill tags com efeito de entrada
-6. [ ] Adicionar parallax sutil no hero section
-7. [ ] Transições de página suaves
-8. [ ] Animação no theme toggle
+1. [x] Instalar GSAP e plugins necessários (`gsap`, `@gsap/business` ou plugins free)
+2. [x] Criar composable `useScrollAnimation.ts`
+3. [x] Adicionar fade-in animations nas seções ao scroll
+4. [x] Animar cards de experiência com stagger
+5. [x] Animar skill tags com efeito de entrada
+6. [x] Adicionar parallax sutil no hero section
+7. [x] Transições de página suaves
+8. [x] Animação no theme toggle
 
 **Validation:**
 - Animações executam suavemente (60fps)
 - Não há layout shift durante animações
 - Animações respeitam `prefers-reduced-motion`
 - Performance não degradada (Lighthouse > 90)
+
+✅ **Completed:** 2026-02-03 - GSAP ScrollTrigger integrado, animações em todas as seções
 
 ### Phase 6: Blog com Nuxt Content
 

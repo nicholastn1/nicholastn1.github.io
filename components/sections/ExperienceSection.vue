@@ -8,13 +8,32 @@ const { data: experiencesData } = await useAsyncData('experiences', () =>
 
 const experiences = computed<Experience[]>(() => experiencesData.value?.experiences || [])
 const summary = computed(() => experiencesData.value?.summary || '')
+
+// Animation refs
+const titleRef = ref<HTMLElement>()
+const summaryRef = ref<HTMLElement>()
+const cardsRef = ref<HTMLElement>()
+
+const { fadeInUp, staggerChildren } = useScrollAnimation()
+
+onMounted(() => {
+  if (titleRef.value) {
+    fadeInUp(titleRef.value, { y: 30 })
+  }
+  if (summaryRef.value) {
+    fadeInUp(summaryRef.value, { y: 30, delay: 0.1 })
+  }
+  if (cardsRef.value) {
+    staggerChildren(cardsRef.value, '.experience-card', { stagger: 0.15, y: 40 })
+  }
+})
 </script>
 
 <template>
   <section id="experiencia" class="py-20">
     <div class="container-main grid gap-10 lg:grid-cols-[1fr_2fr]">
       <!-- Section Title -->
-      <div>
+      <div ref="titleRef">
         <h2 class="section-subtitle text-gray-200 dark:text-gray-800">
           Experiência
         </h2>
@@ -25,17 +44,18 @@ const summary = computed(() => experiencesData.value?.summary || '')
         <!-- Summary -->
         <p
           v-if="summary"
+          ref="summaryRef"
           class="mb-8 text-lg text-text-secondary dark:text-text-muted"
           v-html="summary.replace(/\*\*(.*?)\*\*/g, '<strong class=\'text-text-primary dark:text-white\'>$1</strong>')"
         />
 
         <!-- Experience Cards -->
-        <div class="space-y-6">
+        <div ref="cardsRef" class="space-y-6">
           <UiCard
             v-for="exp in experiences"
             :key="exp.id"
             decorated
-            class="relative"
+            class="experience-card relative"
           >
             <!-- Period -->
             <span class="mb-2 inline-block text-sm font-medium text-accent-green">
