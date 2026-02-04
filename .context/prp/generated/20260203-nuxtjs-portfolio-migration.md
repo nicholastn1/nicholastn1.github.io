@@ -359,23 +359,23 @@ export default defineNuxtConfig({
 ### Phase 1: Setup & Infraestrutura
 
 **Docker Setup (primeiro, para não depender de ambiente local):**
-1. [ ] Criar `.docker/Dockerfile.dev` com Node.js 20 LTS
-2. [ ] Criar `docker-compose.yml` para desenvolvimento
-3. [ ] Criar `.dockerignore` para otimizar build
-4. [ ] Testar que container Docker funciona (`docker compose up`)
+1. [x] Criar `.docker/Dockerfile.dev` com Node.js 20 LTS
+2. [x] Criar `docker-compose.yml` para desenvolvimento
+3. [x] Criar `.dockerignore` para otimizar build
+4. [x] Testar que container Docker funciona (`docker compose up`)
 
 **Nuxt.js Setup (dentro do container ou local):**
-5. [ ] Criar novo projeto Nuxt.js 3 com TypeScript (`npx nuxi@latest init`)
-6. [ ] Configurar Tailwind CSS (`@nuxtjs/tailwindcss`)
-7. [ ] Configurar @nuxtjs/color-mode para dark mode
-8. [ ] Configurar Nuxt Content para blog e dados
-9. [ ] Configurar @nuxt/image para otimização de imagens
-10. [ ] Criar estrutura de pastas conforme especificado
-11. [ ] Configurar ESLint + Prettier para qualidade de código
-12. [ ] Criar ADR-005: Nuxt.js Framework Migration
-13. [ ] Criar ADR-006: Tailwind CSS Styling Strategy
-14. [ ] Criar ADR-007: Docker Development Environment
-15. [ ] Migrar assets estáticos para `/public/images/`
+5. [x] Criar novo projeto Nuxt.js 3 com TypeScript (`npx nuxi@latest init`)
+6. [x] Configurar Tailwind CSS (`@nuxtjs/tailwindcss`)
+7. [x] Configurar @nuxtjs/color-mode para dark mode
+8. [x] Configurar Nuxt Content para blog e dados
+9. [x] Configurar @nuxt/image para otimização de imagens
+10. [x] Criar estrutura de pastas conforme especificado
+11. [x] Configurar ESLint + Prettier para qualidade de código
+12. [x] Criar ADR-005: Nuxt.js Framework Migration
+13. [x] Criar ADR-006: Tailwind CSS Styling Strategy
+14. [x] Criar ADR-007: Docker Development Environment
+15. [x] Migrar assets estáticos para `/public/images/`
 
 **Validation:**
 - `docker compose up` inicia o servidor de desenvolvimento
@@ -383,6 +383,8 @@ export default defineNuxtConfig({
 - Página inicial renderiza "Hello World"
 - Dark mode toggle funciona
 - Hot reload funcionando (com volume mount no Docker)
+
+✅ **Completed:** 2026-02-03 - Docker configurado, Nuxt.js inicializado com todos os módulos, ADRs criados
 
 ### Phase 2: Tipos e Dados
 

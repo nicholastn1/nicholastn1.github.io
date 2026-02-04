@@ -1,6 +1,6 @@
 # ADR-001: Vanilla Static Site Architecture
 
-**Status:** Accepted
+**Status:** Superseded by ADR-005
 **Date:** 2025-02-03
 **Version:** 1.0
 

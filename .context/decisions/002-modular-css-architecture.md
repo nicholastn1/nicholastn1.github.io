@@ -1,6 +1,6 @@
 # ADR-002: Modular CSS Architecture
 
-**Status:** Accepted
+**Status:** Superseded by ADR-006
 **Date:** 2025-02-03
 **Version:** 1.0
 
