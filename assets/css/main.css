@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Base body styles */
+  body {
+    @apply font-sans text-text-primary antialiased;
+  }
+
+  /* Dark mode body */
+  .dark body {
+    @apply bg-background-dark text-white;
+  }
+
+  /* Headings reset */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply m-0 font-semibold;
+  }
+
+  /* Paragraph reset */
+  p {
+    @apply m-0;
+  }
+
+  /* List reset */
+  ul {
+    @apply m-0 list-none p-0;
+  }
+
+  /* Image responsive */
+  img {
+    @apply max-w-full;
+  }
+
+  /* Link base styles */
+  a {
+    @apply text-inherit no-underline transition-colors;
+  }
+}
+
+@layer components {
+  /* Container */
+  .container-main {
+    @apply mx-auto max-w-container px-5;
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+
+  /* Section subtitle (large text) */
+  .section-subtitle {
+    @apply text-6xl font-bold uppercase leading-none;
+    max-width: 4.5ch;
+  }
+
+  @screen md {
+    .section-subtitle {
+      @apply text-5xl;
+    }
+  }
+
+  @screen xs {
+    .section-subtitle {
+      @apply text-3xl;
+    }
+  }
+
+  /* Skill tag */
+  .skill-tag {
+    @apply rounded bg-white px-2 py-1 text-xs text-text-secondary;
+  }
+
+  .dark .skill-tag {
+    @apply bg-background-dark text-text-muted;
+  }
+
+  /* Card with gradient decoration */
+  .card-decorated {
+    @apply relative overflow-hidden rounded bg-gray-100/50 p-5;
+  }
+
+  .card-decorated::before {
+    content: '';
+    @apply absolute -left-10 -top-10 h-20 w-20 rounded-full bg-gradient-primary;
+  }
+
+  .dark .card-decorated {
+    @apply bg-white/5;
+  }
+}
+
+@layer utilities {
+  /* Gradient background */
+  .bg-gradient-primary {
+    background: linear-gradient(137.94deg, #00198d 15.4%, #4f6dff 88.72%);
+  }
+
+  /* Custom bullet point */
+  .bullet-green::before {
+    content: '•';
+    @apply mr-2 text-accent-green;
+  }
+}
