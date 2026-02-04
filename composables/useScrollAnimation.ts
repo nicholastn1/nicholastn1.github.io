@@ -134,7 +134,20 @@ export const useScrollAnimation = () => {
 
     const { delay = 0, duration = 0.6, y = 30, stagger = 0.1 } = options
 
-    gsap.from(`${parent} ${childSelector}`, {
+    // Get children elements - handle both string selectors and DOM elements
+    let children: Element[] = []
+    if (typeof parent === 'string') {
+      const parentEl = document.querySelector(parent)
+      if (parentEl) {
+        children = Array.from(parentEl.querySelectorAll(childSelector))
+      }
+    } else if (parent instanceof Element) {
+      children = Array.from(parent.querySelectorAll(childSelector))
+    }
+
+    if (children.length === 0) return
+
+    gsap.from(children, {
       y,
       opacity: 0,
       duration,
