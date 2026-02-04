@@ -1,0 +1,91 @@
+# Professional experiences - Nicholas Nogueira Portfolio (English)
+
+summary: "Software Engineer with 5+ years of experience across diverse industries including fintechs, e-commerce, church tech, and govtechs. Core technologies include Ruby, Rails, Docker, PostgreSQL, Sidekiq, Vue.js, and TypeScript."
+
+experiences:
+  - id: "gocase"
+    company: "Gocase"
+    role: "Software Engineer | Full Stack"
+    companyUrl: "https://www.gocase.com.br"
+    period:
+      start: "05/2024"
+      end: "Present"
+    description: "E-commerce company that allows customers to express themselves through customized phone cases, thermal bottles, and more."
+    achievements:
+      - "Integrated credit analysis service into the Rails application, automating risk scoring and payment decisions; reduced manual analysis by 60h/month (R$ 2,280) and Serasa checks by 40/month (R$ 737)"
+      - "Reduced by ~20% the code review time by implementing a PR/MR reviewer AI agent using CI/CD"
+      - "Decreased order collection time by 80%, from 10 to 2 minutes per order, by developing a bulk collection system that optimized distribution center processes using Ruby on Rails and PostgreSQL"
+      - "Lowered development environment setup time by over 99%, from 3 days to 20 minutes, by Dockerizing two legacy monolithic systems using Docker, Makefiles, and ShellScript"
+      - "Lessened sellers' operational workload by 15 minutes per order by engineering an automated order segmentation flow within the B2B Ruby on Rails monolith and invoicing systems"
+      - "Prevented over 99.9% of duplicate order creations by implementing a robust SHA256 hash-based reference system in Ruby on Rails, saving an estimated $1,850+ annually"
+    technologies:
+      - "Ruby on Rails"
+      - "Vue.js"
+      - "TypeScript"
+      - "PostgreSQL"
+      - "Redis"
+      - "Sidekiq"
+      - "Docker"
+      - "OpenAI API"
+
+  - id: "inchurch"
+    company: "inChurch/Atos6"
+    role: "Software Engineer | Back-end"
+    companyUrl: "https://inchurch.com.br"
+    period:
+      start: "10/2022"
+      end: "05/2024"
+    description: "Integrated management platform used by over 4,000 churches, providing solutions to support congregations' daily operations."
+    achievements:
+      - "Achieved a 70% drop in unauthorized alterations and slashed manual adjustment efforts by 30% by implementing lambda algorithms in Ruby on Rails while redesigning database schema and permissions architecture"
+      - "Reduced application response time by 76% (from +60ms to ~14ms) by identifying and optimizing N+1 queries with bullet gem, overhauling the MVC structure, and integrating CDNs and micro-frontends"
+      - "Boosted support and development team delivery performance by 20% through active involvement in restructuring the development pipeline, incorporating Kanban and software engineering principles"
+      - "Reduced more than 40% of customer complaints by resolving system bugs, achieving a 100% validation rate for fixes"
+    technologies:
+      - "Ruby on Rails"
+      - "GraphQL"
+      - "Redis"
+      - "Microservices"
+      - "CI/CD"
+      - "Jira"
+      - "Basecamp"
+
+  - id: "fitbank"
+    company: "FitBank"
+    role: "Software Developer | Full Stack"
+    companyUrl: "https://fitbank.com.br"
+    period:
+      start: "09/2021"
+      end: "10/2022"
+    description: "The only Brazilian 100% cloud-native platform integrated with the Brazilian Payment System (SPB)."
+    achievements:
+      - "Reduced system complexity and maintenance difficulties by 40% by simplifying the development process alongside the Software Architects team through the utilization of SOLID and Clean Architecture principles"
+      - "Enabled processes to be performed more quickly through the recreation of the internal administrative system, resulting in a performance improvement of approximately 30% compared to the old system"
+    technologies:
+      - "C#"
+      - ".NET"
+      - "ReactJS"
+      - "Redux"
+      - "SQL Server"
+      - "Azure DevOps"
+      - "SOLID"
+      - "Clean Architecture"
+      - "Microservices"
+
+  - id: "intersol"
+    company: "Intersol"
+    role: "Software Developer | Back-end"
+    period:
+      start: "12/2020"
+      end: "09/2021"
+    description: "Company specialized in web solutions for public administration."
+    achievements:
+      - "Increased a 100% in flow consistency by implementing key features for the accounting module of the system, such as a review control system that mitigated possible bypasses"
+      - "Streamlined the bidding process with a simplified creation flow, resulting in a 40% increase in speed for clients in multiple municipalities"
+    technologies:
+      - "Ruby on Rails"
+      - "PostgreSQL"
+      - "HTML"
+      - "CSS"
+      - "JavaScript"
+      - "Git"

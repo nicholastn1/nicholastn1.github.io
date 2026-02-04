@@ -1,0 +1,47 @@
+# Personal information - Nicholas Nogueira Portfolio (English)
+
+name: "Nicholas Nogueira"
+title: "Software Engineer"
+location: "Fortaleza, Ceará, Brazil"
+email: "nicholastimbo2022@gmail.com"
+phone: "+5585997041828"
+profileImage: "/images/Perfil.png"
+
+# WhatsApp message configuration
+whatsappMessage: "Hello. I'm interested in your profile. Can we schedule a conversation?"
+
+# Biography sections (used in About Me section)
+bio:
+  - "I'm a Software Engineer with 5+ years of experience across diverse industries including fintechs, e-commerce, church tech, and govtechs. My core technologies include Ruby, Rails, Docker, PostgreSQL, and Sidekiq. Colleagues describe me as an innovative and pragmatic thinker who tests ideas from the user's perspective, and as a reliable problem-solver who collaborates in fast-paced cross-functional teams."
+  - "At Intersol, I started my career developing web solutions for public administration. I implemented key features for the accounting module, achieving 100% flow consistency, and streamlined the bidding process resulting in a 40% speed increase for clients across multiple municipalities."
+  - "At FitBank, I participated in a leadership program working on system development and process optimization, focusing on applying SOLID and Clean Architecture principles. I reduced backend complexity by ~40% and improved internal admin system performance by ~30% using .NET, C#, and ReactJS."
+  - "At inChurch/Atos6, I worked as a Software Engineer focused on improving system performance and security. I reduced unauthorized changes by ~70% through implementing lambda algorithms, decreased application response time by ~40% (from 24.3s to 14.8s) by optimizing N+1 queries and implementing Redis caching strategies. I also increased team productivity by ~20% through development pipeline restructuring."
+  - "Currently, I'm a Software Engineer at Gocase, where I implement solutions to optimize e-commerce operational processes. Key achievements include 80% reduction in order picking time (from 10 to 2 minutes) by developing a wave-based picking flow with route optimization, ~20% NPS increase through customer service system redesign with Vue.js and AI tools, and ~99% prevention of duplicate order creation by implementing a SHA-256-based reference system."
+
+# Social media links
+socialLinks:
+  - platform: "github"
+    url: "https://github.com/nicholastn1"
+    label: "GitHub"
+    icon: "github-white.svg"
+
+  - platform: "linkedin"
+    url: "https://www.linkedin.com/in/nicholastn/"
+    label: "LinkedIn"
+    icon: "linkedin-white.svg"
+
+  - platform: "instagram"
+    url: "https://www.instagram.com/nicholastn_/"
+    label: "Instagram"
+    icon: "instagram-white.svg"
+
+  - platform: "whatsapp"
+    url: "https://api.whatsapp.com/send/?phone=5585997041828&text=Hello.%20I'm%20interested%20in%20your%20profile.%20Can%20we%20schedule%20a%20conversation%3F&app_absent=0"
+    label: "WhatsApp"
+
+  - platform: "email"
+    url: "mailto:nicholastimbo2022@gmail.com"
+    label: "Email"
+
+# Footer contact text
+footerText: "If you're interested in my profile, send me a message on whatsapp so we can chat. I'm open to new opportunities, especially in projects focused on optimization, system architecture, and exploring AI's potential in software development!"

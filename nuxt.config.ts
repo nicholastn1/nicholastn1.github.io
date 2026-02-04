@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/sitemap',
     '@nuxt/eslint',
+    '@nuxtjs/i18n',
   ],
 
   // Global CSS
@@ -26,6 +27,22 @@ export default defineNuxtConfig({
     preference: 'system',
     fallback: 'light',
     storageKey: 'nuxt-color-mode',
+  },
+
+  // i18n configuration
+  i18n: {
+    locales: [
+      { code: 'pt-BR', iso: 'pt-BR', name: 'Português', file: 'pt-BR.json' },
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
+    ],
+    defaultLocale: 'pt-BR',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+      alwaysRedirect: false,
+    },
   },
 
   // Nuxt Content configuration

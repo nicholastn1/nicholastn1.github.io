@@ -1,0 +1,65 @@
+# Projects - Nicholas Nogueira Portfolio (English)
+
+projects:
+  - id: "nebula-jobs"
+    name: "Nebula Jobs"
+    description: "Platform for searching tech jobs and managing applications with intelligent tracking. Features a Kanban board with drag & drop, AI-powered tailored CV generation (GPT-4), automatic job scraping, and internationalization support (PT-BR/EN-US)."
+    period:
+      start: "Dec 2025"
+      end: "Paused"
+    technologies:
+      - "Next.js"
+      - "NestJS"
+      - "TypeScript"
+      - "PostgreSQL"
+      - "Prisma"
+      - "Redis"
+      - "OpenAI API"
+      - "Fly.io"
+    github: "https://github.com/nicholastn1/nebula-frontend"
+
+  - id: "homelab"
+    name: "Home Lab"
+    description: "Personal infrastructure project built from an old laptop that was gathering dust. Initially used as a learning environment for Kubernetes, IaC, networking, and automation. Now runs Proxmox with a Coolify VM and GPU PCI passthrough for running LLM models like Whisper and Ollama in personal conversation projects."
+    period:
+      start: "2025"
+      end: "Present"
+    technologies:
+      - "Proxmox"
+      - "Coolify"
+      - "Docker"
+      - "Kubernetes"
+      - "IaC"
+      - "LLM"
+      - "Whisper"
+      - "Ollama"
+    github: "https://github.com/nicholastn1/coolify-backup"
+
+  - id: "gymgenius"
+    name: "GymGenius"
+    description: "GymGenius is a project that aims to solve a personal problem but can be applied to anyone with similar needs. The goal is to allow users to manage and organize their workout routine in a personalized way, avoiding paid solutions that are often superficial."
+    period:
+      start: "May 2023"
+      end: "Paused"
+    technologies:
+      - "Ruby"
+      - "React.js"
+      - "AI"
+      - "OpenAI API"
+      - "AWS"
+      - "MCP"
+    github: "https://github.com/nicholastn1/gymgeniusweb"
+
+  - id: "portfolio"
+    name: "Portfolio"
+    description: "Personal portfolio project created to showcase my knowledge and present some of my characteristics and interests, as well as professional information and skills."
+    period:
+      start: "May 2022"
+      end: "Present"
+    technologies:
+      - "HTML"
+      - "CSS"
+      - "JavaScript"
+      - "Analytical skills"
+    github: "https://github.com/nicholastn1/nicholastn1.github.io"
+    url: "https://nicholastn1.github.io"

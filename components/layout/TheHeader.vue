@@ -1,12 +1,15 @@
 <script setup lang="ts">
-const navLinks = [
-  { href: '#experiencia', label: 'Experiência' },
-  { href: '#formacao', label: 'Formação' },
-  { href: '#projetos', label: 'Projetos' },
-  { href: '#sobre_mim', label: 'Sobre Mim' },
-  { href: '#contato', label: 'Contato' },
-  { href: '/blog', label: 'Blog' },
-]
+const { t } = useI18n()
+const localePath = useLocalePath()
+
+const navLinks = computed(() => [
+  { href: '#experiencia', label: t('nav.experience') },
+  { href: '#formacao', label: t('nav.education') },
+  { href: '#projetos', label: t('nav.projects') },
+  { href: '#sobre_mim', label: t('nav.about') },
+  { href: '#contato', label: t('nav.contact') },
+  { href: localePath('/blog'), label: t('nav.blog') },
+])
 
 // Mobile menu state
 const isMobileMenuOpen = ref(false)
@@ -30,7 +33,7 @@ const closeMobileMenu = () => {
           src="/images/Nicholas_Marca.svg"
           alt="Nicholas Nogueira"
           class="h-8 w-auto dark:brightness-0 dark:invert"
-        />
+        >
       </a>
 
       <!-- Desktop Navigation -->
@@ -44,12 +47,16 @@ const closeMobileMenu = () => {
           {{ link.label }}
         </a>
 
+        <!-- Language Switcher -->
+        <UiLanguageSwitcher class="ml-2" />
+
         <!-- Theme Toggle -->
-        <UiThemeToggle class="ml-2" />
+        <UiThemeToggle class="ml-1" />
       </nav>
 
       <!-- Mobile Menu Button -->
       <div class="flex items-center gap-2 md:hidden">
+        <UiLanguageSwitcher />
         <UiThemeToggle />
         <button
           type="button"

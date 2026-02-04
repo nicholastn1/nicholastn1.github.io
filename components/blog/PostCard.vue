@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content'
 
+const { t, locale } = useI18n()
+
 defineProps<{
   post: ParsedContent
 }>()
 
 const formatDate = (date?: string) => {
   if (!date) return ''
-  return new Date(date).toLocaleDateString('pt-BR', {
+  return new Date(date).toLocaleDateString(locale.value === 'en' ? 'en-US' : 'pt-BR', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
@@ -23,7 +25,7 @@ const formatDate = (date?: string) => {
         :src="String(post.image)"
         :alt="post.title || 'Post'"
         class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-      />
+      >
     </div>
     <div v-else class="aspect-video bg-gradient-primary" />
 
@@ -36,7 +38,7 @@ const formatDate = (date?: string) => {
         </span>
         <span v-if="post.date" class="text-text-muted">{{ formatDate(String(post.date)) }}</span>
         <span v-if="post.readingTime" class="text-text-muted">
-          · {{ post.readingTime }} min de leitura
+          · {{ post.readingTime }} {{ t('blog.minRead') }}
         </span>
       </div>
 
@@ -68,7 +70,7 @@ const formatDate = (date?: string) => {
         :to="post._path || '#'"
         class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline dark:text-primary-light"
       >
-        Ler mais
+        {{ t('blog.readMore') }}
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
         </svg>

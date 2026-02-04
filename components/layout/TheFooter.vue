@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import type { SocialLink } from '~/types'
 
-// Fetch personal data from YAML
-const { data: personal } = await useAsyncData('personal-footer', () =>
-  queryContent('/data/personal').findOne()
+const { t, locale } = useI18n()
+const { getDataPath } = useLocalizedContent()
+
+// Fetch personal data from YAML (locale-aware)
+const { data: personal } = await useAsyncData(`personal-footer-${locale.value}`, () =>
+  queryContent(getDataPath('/data/personal')).findOne()
 )
 
 const currentYear = new Date().getFullYear()
@@ -55,7 +58,7 @@ const socialIcons: Record<string, string> = {
           </p>
 
           <div class="space-y-2">
-            <p class="text-2xl font-bold">Contato</p>
+            <p class="text-2xl font-bold">{{ t('footer.contact') }}</p>
             <p class="text-gray-400">{{ email }}</p>
             <p class="text-gray-400">{{ location }}</p>
           </div>
@@ -77,12 +80,12 @@ const socialIcons: Record<string, string> = {
                 :src="socialIcons[social.platform] || social.icon"
                 :alt="social.label"
                 class="h-8 w-8"
-              />
+              >
             </a>
           </div>
 
           <div class="mt-8 text-sm text-gray-500">
-            <p>&copy; {{ currentYear }} {{ name }}. Todos os direitos reservados.</p>
+            <p>&copy; {{ currentYear }} {{ name }}. {{ t('footer.rights') }}</p>
             <p class="mt-1">Full Stack Software Engineer</p>
           </div>
         </div>

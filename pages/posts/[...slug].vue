@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
+
 definePageMeta({
   layout: 'blog',
 })
@@ -11,8 +14,15 @@ const { data: post } = await useAsyncData(`post-${slug.join('-')}`, () =>
   queryContent('/posts', ...slug).findOne()
 )
 
+const siteUrl = 'https://nicholastn1.github.io'
+const isEnglish = computed(() => locale.value === 'en')
+const currentUrl = computed(() => `${siteUrl}${route.fullPath}`)
+
 // Set page meta
 useHead(() => ({
+  htmlAttrs: {
+    lang: isEnglish.value ? 'en-US' : 'pt-BR',
+  },
   title: post.value?.title ? `${post.value.title} - Blog` : 'Blog - Nicholas Nogueira',
   meta: [
     { name: 'description', content: post.value?.description || '' },
@@ -20,16 +30,21 @@ useHead(() => ({
     { property: 'og:title', content: post.value?.title || '' },
     { property: 'og:description', content: post.value?.description || '' },
     { property: 'og:type', content: 'article' },
+    { property: 'og:url', content: currentUrl.value },
+    { property: 'og:locale', content: isEnglish.value ? 'en_US' : 'pt_BR' },
     { property: 'og:image', content: post.value?.image || '' },
     // Twitter
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: post.value?.title || '' },
     { name: 'twitter:description', content: post.value?.description || '' },
   ],
+  link: [
+    { rel: 'canonical', href: currentUrl.value },
+  ],
 }))
 
 const formatDate = (date: string) => {
-  return new Date(date).toLocaleDateString('pt-BR', {
+  return new Date(date).toLocaleDateString(locale.value === 'en' ? 'en-US' : 'pt-BR', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -49,7 +64,7 @@ const formatDate = (date: string) => {
           </span>
           <span class="text-text-muted">{{ formatDate(post.date) }}</span>
           <span v-if="post.readingTime" class="text-text-muted">
-            · {{ post.readingTime }} min de leitura
+            · {{ post.readingTime }} {{ t('blog.minRead') }}
           </span>
         </div>
 
@@ -81,7 +96,7 @@ const formatDate = (date: string) => {
           :src="post.image"
           :alt="post.title"
           class="w-full"
-        />
+        >
       </div>
 
       <!-- Table of Contents -->
@@ -96,13 +111,13 @@ const formatDate = (date: string) => {
       <footer class="mt-12 border-t border-gray-100 pt-8 dark:border-white/10">
         <div class="flex items-center justify-between">
           <NuxtLink
-            to="/blog"
+            :to="localePath('/blog')"
             class="flex items-center gap-2 text-sm font-medium text-text-secondary hover:text-primary dark:text-text-muted dark:hover:text-primary-light"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Voltar ao Blog
+            {{ t('blog.backToBlog') }}
           </NuxtLink>
         </div>
       </footer>
@@ -111,10 +126,10 @@ const formatDate = (date: string) => {
 
   <!-- 404 -->
   <div v-else class="container-main py-20 text-center">
-    <h1 class="mb-4 text-2xl font-bold">Post não encontrado</h1>
-    <p class="mb-8 text-text-muted">O post que você está procurando não existe.</p>
-    <NuxtLink to="/blog" class="text-primary hover:underline dark:text-primary-light">
-      Voltar ao Blog
+    <h1 class="mb-4 text-2xl font-bold">{{ t('blog.notFound') }}</h1>
+    <p class="mb-8 text-text-muted">{{ t('blog.notFoundDescription') }}</p>
+    <NuxtLink :to="localePath('/blog')" class="text-primary hover:underline dark:text-primary-light">
+      {{ t('blog.backToBlog') }}
     </NuxtLink>
   </div>
 </template>

@@ -1,18 +1,48 @@
 <script setup lang="ts">
+const { t, locale } = useI18n()
+
 definePageMeta({
   layout: 'blog',
 })
 
-useHead({
+const siteUrl = 'https://nicholastn1.github.io'
+const isEnglish = computed(() => locale.value === 'en')
+
+useSeoMeta({
   title: 'Blog - Nicholas Nogueira',
-  meta: [
-    { name: 'description', content: 'Artigos sobre desenvolvimento de software, carreira e tecnologia.' },
+  description: () =>
+    isEnglish.value
+      ? 'Articles about software development, career, and technology.'
+      : 'Artigos sobre desenvolvimento de software, carreira e tecnologia.',
+  ogTitle: 'Blog - Nicholas Nogueira',
+  ogDescription: () =>
+    isEnglish.value
+      ? 'Articles about software development, career, and technology.'
+      : 'Artigos sobre desenvolvimento de software, carreira e tecnologia.',
+  ogType: 'website',
+  ogLocale: () => (isEnglish.value ? 'en_US' : 'pt_BR'),
+})
+
+useHead({
+  htmlAttrs: {
+    lang: () => (isEnglish.value ? 'en-US' : 'pt-BR'),
+  },
+  link: [
+    { rel: 'canonical', href: () => (isEnglish.value ? `${siteUrl}/en/blog` : `${siteUrl}/blog`) },
+    { rel: 'alternate', hreflang: 'pt-BR', href: `${siteUrl}/blog` },
+    { rel: 'alternate', hreflang: 'en-US', href: `${siteUrl}/en/blog` },
+    { rel: 'alternate', hreflang: 'x-default', href: `${siteUrl}/blog` },
   ],
 })
 
-// Fetch all blog posts
-const { data: posts } = await useAsyncData('blog-posts', () =>
-  queryContent('/posts')
+// Get blog posts path based on locale
+const blogPostsPath = computed(() => {
+  return locale.value === 'en' ? '/posts/en' : '/posts/pt'
+})
+
+// Fetch blog posts for current locale
+const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () =>
+  queryContent(blogPostsPath.value)
     .where({ _draft: { $ne: true } })
     .sort({ date: -1 })
     .find()
@@ -41,9 +71,9 @@ const filteredPosts = computed(() => {
     <div class="container-main">
       <!-- Header -->
       <div class="mb-12 text-center">
-        <h1 class="mb-4 text-4xl font-bold">Blog</h1>
+        <h1 class="mb-4 text-4xl font-bold">{{ t('blog.title') }}</h1>
         <p class="text-lg text-text-secondary dark:text-text-muted">
-          Compartilhando conhecimento sobre desenvolvimento, carreira e tecnologia.
+          {{ t('blog.subtitle') }}
         </p>
       </div>
 
@@ -58,7 +88,7 @@ const filteredPosts = computed(() => {
           ]"
           @click="selectedCategory = null"
         >
-          Todos
+          {{ t('blog.all') }}
         </button>
         <button
           v-for="category in categories"
@@ -87,10 +117,10 @@ const filteredPosts = computed(() => {
       <!-- Empty State -->
       <div v-else class="py-20 text-center">
         <p class="text-lg text-text-muted">
-          Nenhum post encontrado.
+          {{ t('blog.noPostsFound') }}
         </p>
         <p class="mt-2 text-sm text-text-muted">
-          Em breve teremos novos conteúdos!
+          {{ t('blog.comingSoon') }}
         </p>
       </div>
     </div>

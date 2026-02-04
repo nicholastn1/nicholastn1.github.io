@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 interface TocLink {
   id: string
   text: string
@@ -19,7 +21,7 @@ const isOpen = ref(true)
       class="flex w-full items-center justify-between font-medium"
       @click="isOpen = !isOpen"
     >
-      <span>Índice</span>
+      <span>{{ t('blog.toc') }}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5 transition-transform"

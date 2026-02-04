@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "experience": "Experiência",
+    "education": "Formação",
+    "skills": "Skills",
+    "projects": "Projetos",
+    "about": "Sobre Mim",
+    "contact": "Contato",
+    "blog": "Blog"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "tagline": "Desenvolvimento & otimização"
+  },
+  "experience": {
+    "title": "Experiência"
+  },
+  "education": {
+    "title": "Formação",
+    "certifications": "Certificações & Treinamentos",
+    "volunteering": "Voluntariado",
+    "languages": "Idiomas",
+    "activities": "Atividades"
+  },
+  "projects": {
+    "title": "Projetos",
+    "viewProject": "Ver projeto"
+  },
+  "skills": {
+    "title": "Skills",
+    "proficient": "Proficiente",
+    "intermediate": "Intermediário",
+    "beginner": "Iniciante"
+  },
+  "footer": {
+    "contact": "Contato",
+    "rights": "Todos os direitos reservados."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Compartilhando conhecimento sobre desenvolvimento, carreira e tecnologia.",
+    "all": "Todos",
+    "noPostsFound": "Nenhum post encontrado.",
+    "comingSoon": "Em breve teremos novos conteúdos!",
+    "readMore": "Ler mais",
+    "minRead": "min de leitura",
+    "notFound": "Post não encontrado",
+    "notFoundDescription": "O post que você está procurando não existe.",
+    "backToBlog": "Voltar ao Blog",
+    "backToPortfolio": "Voltar ao Portfolio",
+    "toc": "Índice"
+  },
+  "theme": {
+    "lightMode": "Ativar modo claro",
+    "darkMode": "Ativar modo escuro"
+  },
+  "language": {
+    "switchTo": "Switch to English"
+  }
+}
