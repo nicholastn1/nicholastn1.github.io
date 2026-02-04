@@ -6,7 +6,7 @@
   <div class="min-h-screen bg-white dark:bg-background-dark">
     <!-- Simplified Header for Blog -->
     <header class="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md dark:border-white/10 dark:bg-background-dark/80">
-      <div class="container-main flex items-center justify-between py-4">
+      <div class="container-main grid grid-cols-3 items-center py-4">
         <!-- Logo / Back to Home -->
         <a href="/" class="flex items-center gap-2 text-sm font-medium text-text-secondary hover:text-text-primary dark:text-text-muted dark:hover:text-white">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -16,12 +16,14 @@
         </a>
 
         <!-- Blog Title -->
-        <a href="/blog" class="text-lg font-bold">
+        <a href="/blog" class="text-center text-lg font-bold">
           Blog
         </a>
 
         <!-- Theme Toggle -->
-        <UiThemeToggle />
+        <div class="flex justify-end">
+          <UiThemeToggle />
+        </div>
       </div>
     </header>
 

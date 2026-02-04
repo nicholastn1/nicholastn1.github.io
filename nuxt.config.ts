@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
   ],
 
+  // Global CSS
+  css: ['~/assets/css/main.css'],
+
   // SSG for GitHub Pages
   ssr: true,
   nitro: {

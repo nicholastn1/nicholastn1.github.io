@@ -29,7 +29,7 @@ onMounted(() => {
         <img
           :src="personal?.profileImage || '/images/Perfil.png'"
           :alt="personal?.name || 'Nicholas Nogueira'"
-          class="h-64 w-64 rounded-full object-cover shadow-lg lg:h-80 lg:w-80"
+          class="w-full max-w-xs object-cover shadow-lg lg:max-w-sm"
         />
       </div>
 

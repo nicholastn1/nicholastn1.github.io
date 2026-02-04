@@ -9,7 +9,7 @@ tags:
   - backend
   - database
 readingTime: 8
-image: "/images/blog/rails-performance.jpg"
+image: "/images/blog/rails-performance.svg"
 ---
 
 # Otimizando Performance em Ruby on Rails

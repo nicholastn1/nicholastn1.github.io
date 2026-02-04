@@ -103,11 +103,6 @@
 }
 
 @layer utilities {
-  /* Gradient background */
-  .bg-gradient-primary {
-    background: linear-gradient(137.94deg, #00198d 15.4%, #4f6dff 88.72%);
-  }
-
   /* Custom bullet point */
   .bullet-green::before {
     content: '•';
