@@ -118,3 +118,14 @@ export interface AboutData {
     content: string
   }[]
 }
+
+export interface Skill {
+  name: string
+  category: 'backend' | 'frontend' | 'database' | 'devops' | 'cloud' | 'architecture' | 'methodology' | 'design' | 'documentation'
+}
+
+export interface SkillsData {
+  proficient: Skill[]
+  intermediate: Skill[]
+  beginner: Skill[]
+}

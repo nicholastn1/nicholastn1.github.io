@@ -12,9 +12,12 @@ experiences:
       end: "Presente"
     description: "Empresa de e-commerce que permite aos clientes se expressarem através de capinhas personalizadas, garrafas térmicas e mais."
     achievements:
-      - "Redução de 80% no tempo de coleta de pedidos (de 10 para 2 minutos) desenvolvendo um fluxo de picking em ondas com otimização de rotas para operadores"
-      - "Aumento de ~20% no NPS reformulando o sistema de atendimento ao cliente com Vue.js, ferramentas de IA, Ant Design Vue e integrações de APIs de terceiros"
-      - "Prevenção de ~99% na criação de pedidos duplicados resolvendo um bug que inflava o volume de pedidos afetados em 64%, economizando estimados $1.850+ anuais"
+      - "Integração de serviço de análise de crédito automatizando scoring de risco e decisões de pagamento, reduzindo análise manual em 60h/mês (R$ 2.280) e checks da Serasa em 40/mês (R$ 737)"
+      - "Redução de ~20% no tempo de code review implementando um agente de IA para revisão de PR/MR via CI/CD"
+      - "Redução de 80% no tempo de coleta de pedidos (de 10 para 2 minutos) desenvolvendo um sistema de coleta em lote com Ruby on Rails e PostgreSQL"
+      - "Redução de 99%+ no tempo de setup do ambiente de desenvolvimento (de 3 dias para 20 minutos) dockerizando dois sistemas monolíticos legados"
+      - "Redução de 15 minutos por pedido na carga operacional dos vendedores através de automação de fluxo de segmentação de pedidos no monolito B2B"
+      - "Prevenção de ~99,9% na criação de pedidos duplicados implementando sistema de referência baseado em SHA-256, economizando estimados $1.850+ anuais"
     technologies:
       - "Ruby on Rails"
       - "Vue.js"

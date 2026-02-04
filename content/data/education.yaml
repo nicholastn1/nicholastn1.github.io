@@ -1,15 +1,15 @@
 # Education, certifications, and languages - Nicholas Nogueira Portfolio
 
-summary: "Sou Bacharel em Ciência da Computação pelo Centro Universitário Farias Brito, onde desenvolvi sólidos conhecimentos em Programação Orientada a Objetos, Estruturas de Dados, Algoritmos, Cloud Computing e Interação Humano-Computador."
+summary: "Estou cursando Bacharelado em Ciência da Computação no Centro Universitário Farias Brito, onde desenvolvo sólidos conhecimentos em Programação Orientada a Objetos, Estruturas de Dados, Algoritmos, Cloud Computing e Interação Humano-Computador."
 
 education:
   - id: "bsc-cs"
     institution: "Centro Universitário Farias Brito"
-    degree: "Bacharel"
+    degree: "Bacharelando"
     course: "Ciência da Computação"
     period:
       start: "Jan 2020"
-      end: "Jan 2025"
+      end: "Em andamento"
     activities:
       - "Membro do Centro Acadêmico (AC)"
       - "Assessor de Projetos (2022-2023)"
