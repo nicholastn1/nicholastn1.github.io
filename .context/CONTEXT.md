@@ -110,7 +110,7 @@ User clicks "Blog" in navigation
 
 | System | Type | Description |
 |--------|------|-------------|
-| Google Fonts | CDN | Roboto (300) and Titillium Web (400, 600, 700) |
+| Google Fonts | CDN | JetBrains Mono (100-800 weights + italics) |
 | GitHub Pages | Hosting | Static site deployment via GitHub Actions |
 | GitHub Actions | CI/CD | Automated build and deploy on push to master |
 | WhatsApp | Link | Direct contact via `wa.me` link |

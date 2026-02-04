@@ -9,71 +9,85 @@
 
 ### 1. Prepare Project Assets
 
-Place any project images in `/img/`:
+Place any project images in `/public/images/`:
 - Use descriptive names: `projeto-nome.png`
-- Optimize images for web (compress PNGs)
+- Optimize images for web (compress PNGs/JPGs)
 - Recommended size: ~600x400px or similar aspect ratio
 
-### 2. Add Project Card HTML
+### 2. Add Project to YAML Data
 
-Add a new project card in the `#projetos` section of `index.html`:
+Edit `/content/data/projects.yaml` and add the new project:
 
-```html
-<div class="projeto-card">
-  <div class="projeto-img">
-    <img src="img/projeto-nome.png" alt="Nome do Projeto">
-  </div>
-  <div class="projeto-info">
-    <h3>Nome do Projeto</h3>
-    <p>Breve descrição do projeto explicando o que ele faz e qual problema resolve.</p>
-    <div class="projeto-tecnologias">
-      <span>React</span>
-      <span>Node.js</span>
-      <span>PostgreSQL</span>
-    </div>
-    <div class="projeto-links">
-      <a href="https://github.com/user/repo" target="_blank" rel="noopener">
-        <img src="img/github.svg" alt="GitHub">
-        Código
-      </a>
-      <a href="https://projeto-demo.com" target="_blank" rel="noopener">
-        <img src="img/link.svg" alt="Link">
-        Demo
-      </a>
-    </div>
-  </div>
-</div>
+```yaml
+projects:
+  # ... existing projects ...
+  - id: "new-project"
+    name: "Nome do Projeto"
+    description: "Breve descrição do projeto explicando o que ele faz e qual problema resolve."
+    period:
+      start: "2025-01"
+      end: "Presente"  # or specific date like "2025-06"
+    technologies:
+      - "React"
+      - "Node.js"
+      - "PostgreSQL"
+    url: "https://projeto-demo.com"
+    github: "https://github.com/user/repo"
+    image: "/images/projeto-nome.png"
 ```
 
-### 3. Verify Card Layout
+### 3. Verify TypeScript Types
 
-The projects section uses CSS Grid. Ensure the new card fits the existing layout:
+Ensure your project data matches the `Project` interface in `/types/index.ts`:
 
-```css
-/* Existing grid in projetos.css */
-.projetos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+```typescript
+export interface Project {
+  id: string
+  name: string
+  description: string
+  period: {
+    start: string
+    end: string
+  }
+  technologies: string[]
+  url?: string
+  github?: string
+  image?: string
 }
 ```
 
 ### 4. Test Display
 
-- Check card alignment with existing projects
-- Verify responsive behavior on mobile
-- Test external links open in new tabs
+Run the development server:
+```bash
+docker compose up
+```
+
+Then verify:
+- Project card displays correctly
+- Card alignment with existing projects
+- Responsive behavior on mobile (use browser DevTools)
+- External links open in new tabs
+- Image loads correctly
+
+### 5. Run Checks
+
+```bash
+docker compose exec app npm run typecheck
+docker compose exec app npm run lint
+```
 
 ## Anti-Patterns
 
 **Don't:**
 - Use very large unoptimized images
-- Skip the `alt` attribute on images
-- Forget `rel="noopener"` on external links
+- Skip optional fields like `url` or `github` without reason
 - Add projects without descriptions
+- Forget to test mobile responsiveness
 
 **Do:**
 - Keep descriptions concise (2-3 sentences)
 - List relevant technologies used
 - Include both code repo and live demo when available
 - Use consistent image sizes across project cards
+- Run typecheck after making changes

@@ -6,10 +6,14 @@ Record of significant technical decisions in this project.
 
 | ADR | Title | Status |
 |-----|-------|--------|
-| [001](001-vanilla-static-site.md) | Vanilla Static Site Architecture | Accepted |
-| [002](002-modular-css-architecture.md) | Modular CSS Architecture | Accepted |
+| [001](001-vanilla-static-site.md) | Vanilla Static Site Architecture | Superseded by ADR-005 |
+| [002](002-modular-css-architecture.md) | Modular CSS Architecture | Superseded by ADR-006 |
 | [003](003-responsive-design-breakpoints.md) | Responsive Design Breakpoints | Accepted |
 | [004](004-github-pages-deployment.md) | GitHub Pages Deployment | Accepted |
+| [005](005-nuxtjs-framework-migration.md) | Nuxt.js Framework Migration | Accepted |
+| [006](006-tailwind-css-styling.md) | Tailwind CSS Styling Strategy | Accepted |
+| [007](007-docker-development-environment.md) | Docker Development Environment | Accepted |
+| [008](008-jetbrains-mono-typography.md) | JetBrains Mono Typography System | Accepted |
 
 ## Template
 

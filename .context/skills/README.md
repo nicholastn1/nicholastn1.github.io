@@ -2,6 +2,14 @@
 
 Skills are step-by-step guides for recurring tasks in this project.
 
+## Available Skills
+
+| Skill | Description |
+|-------|-------------|
+| [add-section](add-section/SKILL.md) | Add a new content section to the portfolio |
+| [add-project](add-project/SKILL.md) | Add a new project to the showcase |
+| [add-blog-post](add-blog-post/SKILL.md) | Create a new blog post |
+
 ## Structure
 
 ```

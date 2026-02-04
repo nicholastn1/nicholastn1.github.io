@@ -7,92 +7,121 @@
 
 ## Step by Step
 
-### 1. Create the CSS File
+### 1. Create TypeScript Interface (if needed)
 
-Create a new stylesheet in `/stylesheets/` named after the section:
+Add types to `/types/index.ts` for the section data:
 
-```css
-/* stylesheets/nova-secao.css */
-
-.nova-secao {
-  padding: 80px 0;
-  background: #fff; /* or #f5f5f5 for alternating */
+```typescript
+export interface Award {
+  id: string
+  title: string
+  organization: string
+  date: string
+  description?: string
 }
 
-.nova-secao .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.nova-secao h2 {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-/* Add responsive breakpoints */
-@media (max-width: 800px) {
-  .nova-secao {
-    padding: 60px 0;
-  }
-}
-
-@media (max-width: 500px) {
-  .nova-secao {
-    padding: 40px 0;
-  }
+export interface AwardsData {
+  summary?: string
+  awards: Award[]
 }
 ```
 
-### 2. Import in style.css
+### 2. Create YAML Data File
 
-Add the import to `/stylesheets/style.css`:
+Create `/content/data/awards.yaml`:
 
-```css
-@import url("nova-secao.css");
+```yaml
+summary: "Recognition for technical excellence"
+awards:
+  - id: "1"
+    title: "Best Technical Implementation"
+    organization: "TechConf 2025"
+    date: "2025-06"
+    description: "Awarded for innovative API design"
 ```
 
-### 3. Add HTML Section
+### 3. Update usePortfolioData Composable
 
-Add the section in `index.html` at the appropriate position:
+Add data fetching method to `/composables/usePortfolioData.ts`:
 
-```html
-<section id="nova_secao" class="nova-secao" aria-label="Nova Seção">
-  <div class="container">
-    <h2>Título da Seção</h2>
-    <!-- Section content -->
-  </div>
-</section>
+```typescript
+export async function getAwardsData() {
+  const { data } = await useAsyncData('awards', () =>
+    queryContent('data/awards').findOne()
+  )
+  return data
+}
 ```
 
-### 4. Add Navigation Link (if needed)
+### 4. Create Vue Section Component
 
-Add to the header nav in `index.html`:
+Create `/components/sections/AwardsSection.vue`:
 
-```html
-<li><a href="#nova_secao">Nova Seção</a></li>
+```vue
+<script setup lang="ts">
+import type { AwardsData } from '~/types'
+
+const { data } = await useAsyncData('awards', () =>
+  queryContent<AwardsData>('data/awards').findOne()
+)
+</script>
+
+<template>
+  <section id="premios" class="py-16 md:py-24" aria-label="Prêmios">
+    <div class="container mx-auto px-4 md:px-6 max-w-5xl">
+      <h2 class="text-h2 text-primary dark:text-primary-light mb-8">
+        Prêmios
+      </h2>
+      <!-- Section content -->
+    </div>
+  </section>
+</template>
 ```
 
-### 5. Test Responsiveness
+### 5. Add to Homepage
 
-Check the section at all breakpoints:
+Import and add the section in `/pages/index.vue`:
+
+```vue
+<template>
+  <!-- ... existing sections ... -->
+  <AwardsSection />
+  <!-- ... -->
+</template>
+```
+
+### 6. Add Navigation Link
+
+Update `/components/layout/TheHeader.vue` navigation:
+
+```vue
+<a href="#premios" class="nav-link">Prêmios</a>
+```
+
+### 7. Test Responsiveness
+
+Check the section at all breakpoints using browser DevTools:
 - Desktop (>1000px)
 - Tablet (800-1000px)
 - Mobile (500-800px)
 - Small mobile (<500px)
 
+Run typecheck to ensure types are correct:
+```bash
+docker compose exec app npm run typecheck
+```
+
 ## Anti-Patterns
 
 **Don't:**
-- Add styles directly in `index.html` with `<style>` tags
-- Put section styles in `global.css`
-- Skip responsive breakpoints
-- Use inline styles
+- Skip TypeScript types for new data structures
+- Put styles inline instead of using Tailwind classes
+- Forget aria-label for accessibility
+- Skip the YAML data file and hardcode content
 
 **Do:**
-- Create a dedicated CSS file per section
-- Follow existing naming conventions (Portuguese section names)
-- Include all four responsive breakpoints
+- Follow existing component patterns (check ExperienceSection.vue)
 - Use semantic HTML5 tags with aria-labels
+- Use Tailwind utility classes for styling
+- Keep data in YAML for easy content updates
+- Support dark mode with `dark:` variants

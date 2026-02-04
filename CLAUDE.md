@@ -24,7 +24,7 @@ If a requested change conflicts with an existing decision:
 - **Content:** Nuxt Content (YAML/Markdown)
 - **Animations:** GSAP
 - **Dark Mode:** @nuxtjs/color-mode
-- **Fonts:** Google Fonts (Roboto, Titillium Web)
+- **Fonts:** JetBrains Mono (Google Fonts)
 - **Hosting:** GitHub Pages (SSG)
 - **Development:** Docker
 
