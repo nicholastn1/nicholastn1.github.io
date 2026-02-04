@@ -1,12 +1,46 @@
 # Projects - Nicholas Nogueira Portfolio
 
 projects:
+  - id: "nebula-jobs"
+    name: "Nebula Jobs"
+    description: "Plataforma para busca de vagas de tecnologia e gerenciamento de candidaturas com acompanhamento inteligente. Possui Kanban com drag & drop, geração de currículos personalizados por vaga usando IA (GPT-4), scraping automático de vagas, e suporte a internacionalização (PT-BR/EN-US)."
+    period:
+      start: "Dez 2025"
+      end: "Pausado"
+    technologies:
+      - "Next.js"
+      - "NestJS"
+      - "TypeScript"
+      - "PostgreSQL"
+      - "Prisma"
+      - "Redis"
+      - "OpenAI API"
+      - "Fly.io"
+    github: "https://github.com/nicholastn1/nebula-frontend"
+
+  - id: "homelab"
+    name: "Home Lab"
+    description: "Projeto de infraestrutura pessoal criado a partir de um notebook antigo. Inicialmente usado como ambiente de estudo para Kubernetes, IaC, redes e automação. Hoje roda Proxmox com uma VM Coolify e PCI passthrough de GPU para executar modelos de LLM como Whisper e Ollama em projetos pessoais de conversação."
+    period:
+      start: "2025"
+      end: "Presente"
+    technologies:
+      - "Proxmox"
+      - "Coolify"
+      - "Docker"
+      - "Kubernetes"
+      - "IaC"
+      - "LLM"
+      - "Whisper"
+      - "Ollama"
+    github: "https://github.com/nicholastn1/coolify-backup"
+
   - id: "gymgenius"
     name: "GymGenius"
     description: "GymGenius é um projeto que busca resolver um problema pessoal, mas que pode ser aplicado para qualquer pessoa com necessidade similar. O objetivo é permitir que o usuário gerencie e organize seu treino de musculação de forma personalizada, evitando soluções pagas e frequentemente superficiais."
     period:
       start: "Mai 2023"
-      end: "Presente"
+      end: "Pausado"
     technologies:
       - "Ruby"
       - "React.js"
@@ -14,6 +48,7 @@ projects:
       - "OpenAI API"
       - "AWS"
       - "MCP"
+    github: "https://github.com/nicholastn1/gymgeniusweb"
 
   - id: "portfolio"
     name: "Portfólio"
