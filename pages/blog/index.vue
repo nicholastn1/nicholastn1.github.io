@@ -1,0 +1,98 @@
+<script setup lang="ts">
+definePageMeta({
+  layout: 'blog',
+})
+
+useHead({
+  title: 'Blog - Nicholas Nogueira',
+  meta: [
+    { name: 'description', content: 'Artigos sobre desenvolvimento de software, carreira e tecnologia.' },
+  ],
+})
+
+// Fetch all blog posts
+const { data: posts } = await useAsyncData('blog-posts', () =>
+  queryContent('/posts')
+    .where({ _draft: { $ne: true } })
+    .sort({ date: -1 })
+    .find()
+)
+
+// Get unique categories
+const categories = computed(() => {
+  const cats = new Set<string>()
+  posts.value?.forEach((post) => {
+    if (post.category) cats.add(post.category)
+  })
+  return Array.from(cats)
+})
+
+// Filter state
+const selectedCategory = ref<string | null>(null)
+
+const filteredPosts = computed(() => {
+  if (!selectedCategory.value) return posts.value
+  return posts.value?.filter((post) => post.category === selectedCategory.value)
+})
+</script>
+
+<template>
+  <div class="py-12">
+    <div class="container-main">
+      <!-- Header -->
+      <div class="mb-12 text-center">
+        <h1 class="mb-4 text-4xl font-bold">Blog</h1>
+        <p class="text-lg text-text-secondary dark:text-text-muted">
+          Compartilhando conhecimento sobre desenvolvimento, carreira e tecnologia.
+        </p>
+      </div>
+
+      <!-- Category Filter -->
+      <div v-if="categories.length" class="mb-8 flex flex-wrap justify-center gap-2">
+        <button
+          :class="[
+            'rounded-full px-4 py-2 text-sm font-medium transition-colors',
+            !selectedCategory
+              ? 'bg-primary text-white'
+              : 'bg-gray-100 text-text-secondary hover:bg-gray-200 dark:bg-white/10 dark:text-text-muted dark:hover:bg-white/20',
+          ]"
+          @click="selectedCategory = null"
+        >
+          Todos
+        </button>
+        <button
+          v-for="category in categories"
+          :key="category"
+          :class="[
+            'rounded-full px-4 py-2 text-sm font-medium capitalize transition-colors',
+            selectedCategory === category
+              ? 'bg-primary text-white'
+              : 'bg-gray-100 text-text-secondary hover:bg-gray-200 dark:bg-white/10 dark:text-text-muted dark:hover:bg-white/20',
+          ]"
+          @click="selectedCategory = category"
+        >
+          {{ category }}
+        </button>
+      </div>
+
+      <!-- Posts Grid -->
+      <div v-if="filteredPosts?.length" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <BlogPostCard
+          v-for="post in filteredPosts"
+          :key="post._path"
+          :post="post"
+        />
+      </div>
+
+      <!-- Empty State -->
+      <div v-else class="py-20 text-center">
+        <p class="text-lg text-text-muted">
+          Nenhum post encontrado.
+        </p>
+        <p class="mt-2 text-sm text-text-muted">
+          Em breve teremos novos conteúdos!
+        </p>
+      </div>
+    </div>
+  </div>
+</template>

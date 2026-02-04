@@ -462,21 +462,23 @@ export default defineNuxtConfig({
 
 ### Phase 6: Blog com Nuxt Content
 
-1. [ ] Criar layout `blog.vue` para páginas de blog
-2. [ ] Criar página `/pages/blog/index.vue` (listagem)
-3. [ ] Criar página `/pages/posts/[categoria]/[slug].vue`
-4. [ ] Criar componentes PostCard.vue e PostList.vue
-5. [ ] Criar TableOfContents.vue para posts longos
-6. [ ] Configurar syntax highlighting para code blocks
-7. [ ] Criar post de exemplo em `/content/posts/tech/`
-8. [ ] Adicionar link para blog na navegação
-9. [ ] Configurar meta tags dinâmicas para posts (Open Graph)
+1. [x] Criar layout `blog.vue` para páginas de blog
+2. [x] Criar página `/pages/blog/index.vue` (listagem)
+3. [x] Criar página `/pages/posts/[categoria]/[slug].vue`
+4. [x] Criar componentes PostCard.vue e PostList.vue
+5. [x] Criar TableOfContents.vue para posts longos
+6. [x] Configurar syntax highlighting para code blocks
+7. [x] Criar post de exemplo em `/content/posts/tech/`
+8. [x] Adicionar link para blog na navegação
+9. [x] Configurar meta tags dinâmicas para posts (Open Graph)
 
 **Validation:**
 - Blog lista posts por categoria
 - Post individual renderiza markdown corretamente
 - Code highlighting funciona
 - Meta tags aparecem corretamente (testar com opengraph.xyz)
+
+✅ **Completed:** 2026-02-03 - Blog funcional com listagem, filtro por categoria, post de exemplo
 
 ### Phase 7: SEO & Performance
 

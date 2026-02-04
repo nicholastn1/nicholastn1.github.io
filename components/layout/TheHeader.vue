@@ -5,6 +5,7 @@ const navLinks = [
   { href: '#projetos', label: 'Projetos' },
   { href: '#sobre_mim', label: 'Sobre Mim' },
   { href: '#contato', label: 'Contato' },
+  { href: '/blog', label: 'Blog' },
 ]
 
 // Mobile menu state
