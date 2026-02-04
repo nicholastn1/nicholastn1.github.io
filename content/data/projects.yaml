@@ -1,0 +1,30 @@
+# Projects - Nicholas Nogueira Portfolio
+
+projects:
+  - id: "gymgenius"
+    name: "GymGenius"
+    description: "GymGenius é um projeto que busca resolver um problema pessoal, mas que pode ser aplicado para qualquer pessoa com necessidade similar. O objetivo é permitir que o usuário gerencie e organize seu treino de musculação de forma personalizada, evitando soluções pagas e frequentemente superficiais."
+    period:
+      start: "Mai 2023"
+      end: "Presente"
+    technologies:
+      - "Ruby"
+      - "React.js"
+      - "IA"
+      - "OpenAI API"
+      - "AWS"
+      - "MCP"
+
+  - id: "portfolio"
+    name: "Portfólio"
+    description: "Projeto de portfólio pessoal criado para demonstrar meus conhecimentos e apresentar um pouco das minhas características e curiosidades, bem como informações profissionais e habilidades."
+    period:
+      start: "Mai 2022"
+      end: "Presente"
+    technologies:
+      - "HTML"
+      - "CSS"
+      - "JavaScript"
+      - "Habilidades analíticas"
+    github: "https://github.com/nicholastn1/nicholastn1.github.io"
+    url: "https://nicholastn1.github.io"

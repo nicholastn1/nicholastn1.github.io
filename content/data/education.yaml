@@ -1,0 +1,96 @@
+# Education, certifications, and languages - Nicholas Nogueira Portfolio
+
+summary: "Sou Bacharel em Ciência da Computação pelo Centro Universitário Farias Brito, onde desenvolvi sólidos conhecimentos em Programação Orientada a Objetos, Estruturas de Dados, Algoritmos, Cloud Computing e Interação Humano-Computador."
+
+education:
+  - id: "bsc-cs"
+    institution: "Centro Universitário Farias Brito"
+    degree: "Bacharel"
+    course: "Ciência da Computação"
+    period:
+      start: "Jan 2020"
+      end: "Jan 2025"
+    activities:
+      - "Membro do Centro Acadêmico (AC)"
+      - "Assessor de Projetos (2022-2023)"
+
+certifications:
+  - id: "ui-design"
+    name: "UI Design for Beginners"
+    provider: "Origamid"
+    date: "Abr 2023"
+
+  - id: "ruby-dio"
+    name: "Ruby Developer Training"
+    provider: "DIO"
+    date: "Fev 2023"
+
+  - id: "dotnet-potential"
+    name: "Potencial .NET Developer"
+    provider: "DIO"
+    date: "Set 2022"
+
+  - id: "react-dio"
+    name: "React Developer Training"
+    provider: "DIO"
+    date: "Set 2022"
+
+  - id: "cyber-security"
+    name: "Cyber Security Experience II"
+    provider: "XP Educação"
+    date: "Jul 2022"
+
+  - id: "dotnet-formation"
+    name: "Formação .NET Developer"
+    provider: "DIO"
+    date: "Jul 2022"
+
+  - id: "git-azure"
+    name: "Fundamentos do Git e Azure DevOps"
+    provider: "balta.io"
+    date: "Jul 2022"
+
+  - id: "cs50"
+    name: "Introdução à Ciência da Computação - O Curso de Harvard"
+    provider: "Fundação Estudar"
+    date: "Jul 2022"
+
+  - id: "efset"
+    name: "EF SET English Certificate (B2 Upper Intermediate)"
+    provider: "EF SET"
+    date: "Abr 2022"
+
+volunteering:
+  - id: "monitor-estudar"
+    role: "Monitor"
+    organization: "Fundação Estudar"
+    period:
+      start: "Fev 2022"
+      end: "Jan 2023"
+
+  - id: "dio-ambassador-6"
+    role: "DIO Campus Expert Ambassador #6"
+    organization: "DIO"
+    period:
+      start: "Fev 2023"
+      end: "Abr 2023"
+
+  - id: "dio-ambassador-4"
+    role: "DIO Campus Expert Ambassador #4"
+    organization: "DIO"
+    period:
+      start: "Jul 2022"
+      end: "Set 2022"
+
+languages:
+  - name: "Português"
+    level: "Nativo"
+    proficiency: "Native"
+
+  - name: "Inglês"
+    level: "Intermediário (B2)"
+    proficiency: "Intermediate"
+
+  - name: "Espanhol"
+    level: "Básico"
+    proficiency: "Basic"

@@ -1,0 +1,46 @@
+# Personal information - Nicholas Nogueira Portfolio
+
+name: "Nicholas Nogueira"
+title: "Full Stack Software Engineer"
+location: "Fortaleza, Ceará, Brasil"
+email: "nicholastimbo2022@gmail.com"
+phone: "+5585997041828"
+profileImage: "/images/Perfil.png"
+
+# WhatsApp message configuration
+whatsappMessage: "Olá. Tive interesse em seu perfil. Podemos marcar uma conversa?"
+
+# Biography sections (used in About Me section)
+bio:
+  - "Sou um Engenheiro de Software Full Stack com mais de 5 anos de experiência especializado em Ruby on Rails. Minha primeira experiência profissional foi como Estagiário na Intersol, onde rapidamente evoluí para uma posição remunerada. Desde então, desenvolvi projetos em indústrias como fintechs, igrejas tech, govtechs e e-commerces, construindo um sólido histórico em otimização de sistemas e desenvolvimento web."
+  - "No FitBank, participei do programa de liderança trabalhando no desenvolvimento de sistemas e otimização de processos, com foco na aplicação de princípios SOLID e Clean Architecture. A experiência me permitiu aprimorar habilidades em arquitetura de software e desenvolvimento full-stack utilizando tecnologias como .NET, React e SQL Server."
+  - "Na inChurch, trabalhei como Software Engineer focado em melhorar a performance e a segurança do sistema. Consegui resultados expressivos como redução do tempo de resposta em 76% e diminuição de 70% em alterações não autorizadas. O trabalho envolveu desde a otimização de queries até a reestruturação do pipeline de desenvolvimento, incorporando práticas ágeis e ferramentas modernas."
+  - "Hoje sou Full Stack Software Engineer na Gocase, onde implemento soluções para otimizar processos operacionais de e-commerce. Meu trabalho inclui a implementação de revisores de código baseados em IA, redução do tempo de coleta de pedidos em 80% e melhoria no fluxo de segmentação de pedidos. Também tenho explorado constantemente maneiras de integrar IA ao meu trabalho para aumentar a eficiência e otimizar processos."
+
+# Social media links
+socialLinks:
+  - platform: "github"
+    url: "https://github.com/nicholastn1"
+    label: "GitHub"
+    icon: "github-white.svg"
+
+  - platform: "linkedin"
+    url: "https://www.linkedin.com/in/nicholastn/"
+    label: "LinkedIn"
+    icon: "linkedin-white.svg"
+
+  - platform: "instagram"
+    url: "https://www.instagram.com/nicholastn_/"
+    label: "Instagram"
+    icon: "instagram-white.svg"
+
+  - platform: "whatsapp"
+    url: "https://api.whatsapp.com/send/?phone=5585997041828&text=Olá.%20Tive%20interesse%20em%20seu%20perfil.%20Podemos%20marcar%20uma%20conversa%3F&app_absent=0"
+    label: "WhatsApp"
+
+  - platform: "email"
+    url: "mailto:nicholastimbo2022@gmail.com"
+    label: "Email"
+
+# Footer contact text
+footerText: "Se você tem interesse em meu perfil, me envie uma mensagem no whatsapp para conversarmos. Estou aberto a novas oportunidades, especialmente em projetos focados em otimização, arquitetura de sistemas e exploração do potencial da IA no desenvolvimento de software!"

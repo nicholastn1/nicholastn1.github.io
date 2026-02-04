@@ -1,0 +1,90 @@
+# Professional experiences - Nicholas Nogueira Portfolio
+
+summary: "Tenho mais de 5 anos de experiência especializada em Ruby On Rails, além de outras tecnologias como Vue.js, React, AWS, PostgreSQL e Docker. Trabalho com sistemas escaláveis e tenho sólida experiência em otimização de processos, desenvolvimento web e integração de IA em fluxos de trabalho."
+
+experiences:
+  - id: "gocase"
+    company: "Gocase"
+    role: "Full Stack Software Engineer"
+    companyUrl: "https://www.gocase.com.br"
+    period:
+      start: "05/2024"
+      end: "Presente"
+    description: "Atuo otimizando processos operacionais e desenvolvendo soluções eficientes para e-commerce. Entre minhas principais realizações, destacam-se:"
+    achievements:
+      - "Redução do tempo de revisão de código em 20% com implementação de PR/MR reviewer usando CI/CD"
+      - "Diminuição do tempo de coleta de pedidos em 80% através de um sistema de coleta em lote"
+      - "Redução do tempo de configuração de ambiente em 99% via Dockerização"
+      - "Otimização do fluxo de segmentação de pedidos, economizando 15 minutos por pedido"
+    technologies:
+      - "Ruby On Rails"
+      - "Vue.js"
+      - "PostgreSQL"
+      - "Redis"
+      - "Sidekiq"
+      - "Docker"
+      - "CI/CD"
+      - "IA"
+
+  - id: "inchurch"
+    company: "inChurch"
+    role: "Software Engineer"
+    companyUrl: "https://inchurch.com.br"
+    period:
+      start: "10/2022"
+      end: "05/2024"
+    description: "Trabalhei no desenvolvimento e manutenção do sistema inChurch, focado em gestão de igrejas. Realizei implementações significativas para melhorar performance e segurança:"
+    achievements:
+      - "Redução de 70% em alterações não autorizadas e 30% em esforços de ajustes manuais com implementação de algoritmos lambda"
+      - "Diminuição do tempo de resposta em 76% (de +60ms para ~14ms) otimizando queries N+1"
+      - "Aumento de 20% na performance do time com reestruturação do pipeline de desenvolvimento"
+      - "Redução de mais de 40% das reclamações de clientes com resolução eficiente de bugs"
+    technologies:
+      - "Ruby On Rails"
+      - "RubyMine"
+      - "Microsserviços"
+      - "GraphQL"
+      - "Kanban"
+      - "Jira"
+      - "Clickup"
+      - "Basecamp"
+
+  - id: "fitbank"
+    company: "FitBank 450"
+    role: "Full Stack Software Developer"
+    companyUrl: "https://fitbank.com.br"
+    period:
+      start: "11/2021"
+      end: "10/2022"
+    description: "Participei do programa de liderança da empresa, focando em melhorias de sistemas e processos para facilitar o desenvolvimento:"
+    achievements:
+      - "Redução da complexidade do sistema em 40% aplicando princípios SOLID e Clean Architecture"
+      - "Melhoria de performance em 30% na recriação do sistema administrativo interno"
+      - "Contribuição para desenvolvimento de produtos utilizando React.js, .NET e C#"
+    technologies:
+      - "C#"
+      - ".NET"
+      - "ReactJS"
+      - "Redux"
+      - "SQL Server"
+      - "Azure DevOps"
+      - "SOLID"
+      - "Clean Architecture"
+
+  - id: "intersol"
+    company: "Intersol - Soluções Web"
+    role: "Backend Software Developer"
+    period:
+      start: "12/2020"
+      end: "11/2021"
+    description: "Iniciei como estagiário voluntário e rapidamente fui promovido a remunerado. Trabalhei no desenvolvimento de sistemas para administração pública:"
+    achievements:
+      - "Aumento de 100% na consistência de fluxo com implementação de recursos para o módulo de contabilidade"
+      - "Otimização do processo de licitação, aumentando a velocidade em 40% para clientes de múltiplos municípios"
+    technologies:
+      - "Ruby On Rails"
+      - "HTML"
+      - "CSS"
+      - "PostgreSQL"
+      - "JavaScript"
+      - "Git"
