@@ -1,0 +1,35 @@
+# Docker Compose for Nuxt.js Portfolio Development
+# Usage: docker compose up (starts dev server with hot reload)
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile.dev
+    container_name: portfolio-dev
+    ports:
+      - "3000:3000"
+      # Nuxt devtools
+      - "24678:24678"
+    volumes:
+      # Mount source code for hot reload
+      - .:/app
+      # Use named volume for node_modules to avoid conflicts with host
+      - node_modules:/app/node_modules
+      # Mount .nuxt as named volume for better performance
+      - nuxt_cache:/app/.nuxt
+    environment:
+      - NODE_ENV=development
+      - HOST=0.0.0.0
+      - PORT=3000
+      # Enable polling for file watching (needed for Docker on some systems)
+      - CHOKIDAR_USEPOLLING=true
+    # Keep container running and allow interactive commands
+    stdin_open: true
+    tty: true
+    # Restart on failure
+    restart: unless-stopped
+
+volumes:
+  node_modules:
+  nuxt_cache:

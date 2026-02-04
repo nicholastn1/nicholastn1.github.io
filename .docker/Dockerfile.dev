@@ -1,0 +1,21 @@
+# Development Dockerfile for Nuxt.js 3 Portfolio
+# Node.js 20 LTS with Alpine for smaller image size
+
+FROM node:20-alpine
+
+# Install git and other useful tools for development
+RUN apk add --no-cache git
+
+# Set working directory
+WORKDIR /app
+
+# Set environment variables for Nuxt
+ENV HOST=0.0.0.0
+ENV PORT=3000
+ENV NODE_ENV=development
+
+# Expose Nuxt dev server port
+EXPOSE 3000
+
+# Default command - will be overridden by docker-compose
+CMD ["npm", "run", "dev"]
