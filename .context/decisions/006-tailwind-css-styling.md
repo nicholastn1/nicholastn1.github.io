@@ -2,7 +2,7 @@
 
 **Status:** Accepted
 **Date:** 2026-02-03
-**Version:** 1.0
+**Version:** 2.0
 **Supersedes:** ADR-002 (Modular CSS Architecture)
 
 ## Context
@@ -27,7 +27,7 @@ Use **Tailwind CSS** as the primary styling approach via `@nuxtjs/tailwindcss` m
 - Primary gradient: `#00198d` to `#4f6dff`
 - Accent green: `#00e59b`
 - Background dark: `#141414`
-- Font: Titillium Web (primary), Roboto (secondary)
+- Font: JetBrains Mono (see ADR-008 for typography details)
 - Container max-width: 1200px
 
 ## Consequences
@@ -51,3 +51,4 @@ Use **Tailwind CSS** as the primary styling approach via `@nuxtjs/tailwindcss` m
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-02-03 | Initial decision - adopt Tailwind CSS |
+| 2.0 | 2026-02-03 | Updated font from Titillium Web/Roboto to JetBrains Mono (see ADR-008) |

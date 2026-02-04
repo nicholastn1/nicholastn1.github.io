@@ -36,8 +36,23 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Titillium Web', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
+        sans: ['var(--font-primary)', 'monospace'],
+        mono: ['var(--font-primary)', 'monospace'],
+      },
+      fontWeight: {
+        thin: 'var(--font-weight-thin)',
+        extralight: 'var(--font-weight-extralight)',
+        light: 'var(--font-weight-light)',
+        normal: 'var(--font-weight-regular)',
+        medium: 'var(--font-weight-medium)',
+        semibold: 'var(--font-weight-semibold)',
+        bold: 'var(--font-weight-bold)',
+        extrabold: 'var(--font-weight-extrabold)',
+      },
+      lineHeight: {
+        tight: 'var(--line-height-tight)',
+        normal: 'var(--line-height-normal)',
+        relaxed: 'var(--line-height-relaxed)',
       },
       maxWidth: {
         container: '1200px',

@@ -62,7 +62,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'pt-BR',
       },
-      title: 'Nicholas Nogueira - Full Stack Software Engineer',
+      title: 'Nicholas Nogueira - Software Engineer',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -75,7 +75,7 @@ export default defineNuxtConfig({
         // Open Graph
         {
           property: 'og:title',
-          content: 'Nicholas Nogueira - Full Stack Software Engineer',
+          content: 'Nicholas Nogueira - Software Engineer',
         },
         {
           property: 'og:description',
@@ -99,7 +99,7 @@ export default defineNuxtConfig({
         },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400&display=swap',
+          href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap',
         },
       ],
     },
