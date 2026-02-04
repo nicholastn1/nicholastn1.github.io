@@ -1,0 +1,7 @@
+# robots.txt for nicholastn1.github.io
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nicholastn1.github.io/sitemap.xml
