@@ -501,13 +501,15 @@ export default defineNuxtConfig({
 
 ### Phase 8: Deploy & CI/CD
 
-1. [ ] Configurar `nuxt.config.ts` para GitHub Pages (`nitro.preset: 'github-pages'`)
-2. [ ] Criar `.github/workflows/deploy.yml` para GitHub Actions
-3. [ ] Configurar build e deploy automático no push para master
-4. [ ] Testar deploy em branch separada primeiro
+1. [x] Configurar `nuxt.config.ts` para GitHub Pages (`nitro.preset: 'github-pages'`)
+2. [x] Criar `.github/workflows/deploy.yml` para GitHub Actions
+3. [x] Configurar build e deploy automático no push para master
+4. [x] Testar deploy em branch separada primeiro
 5. [ ] Configurar CNAME para domínio customizado futuro (preparação)
-6. [ ] Documentar processo de deploy no README
-7. [ ] Atualizar CLAUDE.md com novos comandos
+6. [x] Documentar processo de deploy no README
+7. [x] Atualizar CLAUDE.md com novos comandos
+
+✅ **Completed:** 2026-02-03 - GitHub Actions configurado, README atualizado
 
 **Validation:**
 - Push para master dispara deploy automático
